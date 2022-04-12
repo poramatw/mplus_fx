@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class LoginUi extends StatelessWidget {
-  const LoginUi({Key? key}) : super(key: key);
+class SignInUi extends StatelessWidget {
+  const SignInUi({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +37,19 @@ class LoginUi extends StatelessWidget {
             height: 25,
           ),
           Text(
-            "Hello, Welcome",
+            "Sign In",
             style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 35, color: Colors.white),
           ),
           SizedBox(
-            height: 70,
+            height: 15,
+          ),
+          Text(
+            "Enjoy our application",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          ),
+          SizedBox(
+            height: 55,
           ),
           Container(
             decoration: BoxDecoration(
@@ -76,7 +83,7 @@ class LoginUi extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 50,
+            height: 40,
           ),
           Container(
             decoration: BoxDecoration(
@@ -88,7 +95,7 @@ class LoginUi extends StatelessWidget {
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 Text(
-                  "Sign Up",
+                  "Sign In",
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -98,17 +105,24 @@ class LoginUi extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 25,
+          ),
+          Text(
+            "Forgot your password?",
+            style: TextStyle(fontSize: 15, color: Colors.white),
+          ),
+          SizedBox(
+            height: 15,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               Text(
-                "Already have account? ",
+                "New user? ",
                 style: TextStyle(fontSize: 15, color: Colors.white),
               ),
-              Text("Login",
+              Text("Create an account",
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.white,

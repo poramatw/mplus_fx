@@ -76,7 +76,7 @@ class LoginUi extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 50,
+            height: 40,
           ),
           Container(
             decoration: BoxDecoration(
