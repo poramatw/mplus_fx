@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/screens/accountDetails.dart';
-//import 'package:mplus_fx/screens/welcomeLogin.dart';
+import 'package:mplus_fx/screens/welcomeLogin.dart';
 
 //import 'screens/signIn.dart';
 
@@ -17,7 +16,7 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "main",
-      home: AccountDetails(),
+      home: WelcomeLogin(),
     );
   }
 }

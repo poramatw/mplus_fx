@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/accountDetails.dart';
+import 'package:mplus_fx/screens/signIn.dart';
 
 class LoginUi extends StatelessWidget {
   const LoginUi({Key? key}) : super(key: key);
@@ -78,23 +80,30 @@ class LoginUi extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30), color: Colors.amber),
-            height: 47,
-            width: 140,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                Text(
-                  "Sign Up",
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-              ],
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return AccountDetails();
+              }));
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30), color: Colors.amber),
+              height: 47,
+              width: 140,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  Text(
+                    "Sign Up",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                ],
+              ),
             ),
           ),
           SizedBox(
@@ -108,11 +117,18 @@ class LoginUi extends StatelessWidget {
                 "Already have account? ",
                 style: TextStyle(fontSize: 15, color: Colors.white),
               ),
-              Text("Login",
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.white,
-                  ))
+              GestureDetector(
+                onTap: (() {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return SignIn();
+                  }));
+                }),
+                child: Text("Login",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                    )),
+              )
             ],
           ),
         ]),
