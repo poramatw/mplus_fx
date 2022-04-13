@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/screens/welcomeLogin.dart';
+import 'package:mplus_fx/screens/viewDetails.dart';
 
 class AccountDetails extends StatefulWidget {
   const AccountDetails({Key? key}) : super(key: key);
@@ -112,7 +112,7 @@ class _AccountDetailsState extends State<AccountDetails> {
                                   onTap: () {
                                     Navigator.push(context,
                                         MaterialPageRoute(builder: (context) {
-                                      return WelcomeLogin();
+                                      return ViewDetials();
                                     }));
                                   },
                                   child: Container(
