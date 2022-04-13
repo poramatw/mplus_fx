@@ -20,7 +20,7 @@ class _AccountDetailsState extends State<AccountDetails> {
           physics: ClampingScrollPhysics(),
           children: [
             Container(
-                margin: EdgeInsets.only(left: 16, right: 26, top: 16),
+                margin: EdgeInsets.only(left: 16, right: 26, top: 24),
                 child: Row(
                   children: [
                     IconButton(
@@ -32,14 +32,14 @@ class _AccountDetailsState extends State<AccountDetails> {
                     Text(
                       "MplusFX",
                       style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                     ),
                     Spacer(),
                     Container(
                       height: 39,
                       width: 39,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
+                          borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                               image: AssetImage('assets/images/logo.png'))),
                     ),
@@ -50,64 +50,66 @@ class _AccountDetailsState extends State<AccountDetails> {
                 )),
             //CardView
             SizedBox(
-              height: 25,
+              height: 33,
             ),
             Padding(
-                padding: EdgeInsets.only(left: 36, bottom: 16),
+                padding: EdgeInsets.only(left: 30, bottom: 16),
                 child: Text(
                   "Accounts",
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                  style: TextStyle(fontSize: 18),
                 )),
             SizedBox(
-              height: 30,
+              height: 62,
             ),
             Container(
-              height: 189,
+              height: 205,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.only(left: 16, right: 6),
+                  padding: EdgeInsets.only(left: 15, right: 15),
                   itemCount: 2,
                   itemBuilder: (context, index) {
                     return Container(
-                        margin: EdgeInsets.only(right: 16, left: 16),
-                        height: 199,
-                        width: 214,
+                        margin: EdgeInsets.only(right: 15, left: 15),
+                        height: 205,
+                        width: 200,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(28),
+                            borderRadius: BorderRadius.circular(30),
                             color: Colors.greenAccent),
                         child: Stack(
                           children: [
                             Positioned(
-                                left: 39,
-                                top: 45,
+                                left: 30,
+                                top: 40,
                                 child: Text(
                                   "MT4 Standard Account",
                                   style: TextStyle(
+                                      fontSize: 14,
                                       color: Color.fromRGBO(27, 29, 111, 1),
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.w600),
                                 )),
                             Positioned(
-                                left: 39,
-                                top: 70,
+                                left: 30,
+                                top: 64,
                                 child: Text(
                                   "123456789",
                                   style: TextStyle(
+                                      fontSize: 14,
                                       color: Color.fromRGBO(27, 29, 111, 1),
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.w600),
                                 )),
                             Positioned(
-                                left: 35,
-                                top: 100,
+                                left: 24,
+                                top: 90,
                                 child: Text(
                                   "2,000.00 USD",
                                   style: TextStyle(
                                       fontSize: 24,
                                       color: Color.fromRGBO(27, 29, 111, 1),
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.w600),
                                 )),
                             Positioned(
-                                left: 39,
-                                top: 140,
+                                left: 30,
+                                top: 145,
                                 child: GestureDetector(
                                   onTap: () {
                                     Navigator.push(context,
@@ -119,8 +121,8 @@ class _AccountDetailsState extends State<AccountDetails> {
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(30),
                                         color: Colors.white),
-                                    height: 37,
-                                    width: 140,
+                                    height: 40,
+                                    width: 144,
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -128,7 +130,8 @@ class _AccountDetailsState extends State<AccountDetails> {
                                         Text(
                                           "View Details",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w600,
                                               color: Color.fromRGBO(
                                                   27, 29, 111, 1)),
                                         ),

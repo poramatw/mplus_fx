@@ -15,6 +15,7 @@ class Main extends StatelessWidget {
     return MaterialApp(
       title: "main",
       home: WelcomeLogin(),
+      theme: ThemeData(fontFamily: 'Kanit'),
     );
   }
 }

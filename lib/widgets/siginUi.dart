@@ -16,14 +16,14 @@ class SignInUi extends StatelessWidget {
           children: [
             Column(children: [
               SizedBox(
-                height: 80,
+                height: 88,
               ),
               Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Color.fromRGBO(12, 17, 55, 1)),
-                height: 150,
-                width: 150,
+                height: 145,
+                width: 145,
                 child: FittedBox(
                     fit: BoxFit.fill,
                     child: ClipRRect(
@@ -32,42 +32,41 @@ class SignInUi extends StatelessWidget {
                             image: AssetImage('assets/images/logo.png')))),
               ),
               SizedBox(
-                height: 25,
+                height: 16,
               ),
               Text(
                 "MplusFX",
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                     fontSize: 30,
                     color: Colors.white),
               ),
               SizedBox(
-                height: 25,
+                height: 21,
               ),
               Text(
                 "Sign In",
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w600,
                     fontSize: 35,
                     color: Colors.white),
               ),
               SizedBox(
-                height: 15,
+                height: 6,
               ),
               Text(
                 "Enjoy our application",
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(color: Colors.white),
               ),
               SizedBox(
-                height: 55,
+                height: 38,
               ),
               Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(22),
                     color: Colors.white),
-                width: 300,
-                height: 50,
+                width: 270,
+                height: 44,
                 child: TextFormField(
                   decoration: InputDecoration(
                       prefixIcon: Icon(
@@ -82,10 +81,10 @@ class SignInUi extends StatelessWidget {
               ),
               Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(22),
                     color: Colors.white),
-                width: 300,
-                height: 50,
+                width: 270,
+                height: 44,
                 child: TextFormField(
                   decoration: InputDecoration(
                       prefixIcon: Icon(
@@ -96,7 +95,7 @@ class SignInUi extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 40,
+                height: 48,
               ),
               GestureDetector(
                 onDoubleTap: () {
@@ -113,9 +112,9 @@ class SignInUi extends StatelessWidget {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(22),
                         color: Colors.amber),
-                    height: 47,
+                    height: 44,
                     width: 140,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -124,8 +123,8 @@ class SignInUi extends StatelessWidget {
                         Text(
                           "Sign In",
                           style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
                               color: Colors.white),
                         ),
                       ],
@@ -134,11 +133,11 @@ class SignInUi extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: 41,
               ),
               Text(
                 "Forgot your password?",
-                style: TextStyle(fontSize: 15, color: Colors.white),
+                style: TextStyle(fontSize: 12, color: Colors.white),
               ),
               SizedBox(
                 height: 15,
@@ -149,7 +148,7 @@ class SignInUi extends StatelessWidget {
                 children: [
                   Text(
                     "New user? ",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    style: TextStyle(fontSize: 12, color: Colors.white),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -161,7 +160,7 @@ class SignInUi extends StatelessWidget {
                     child: Text("Create an account",
                         style: TextStyle(
                           decoration: TextDecoration.underline,
-                          fontSize: 15,
+                          fontSize: 12,
                           color: Colors.white,
                         )),
                   )
