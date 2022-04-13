@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 
@@ -14,12 +14,11 @@ class _ViewDetialsState extends State<ViewDetials> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      margin: EdgeInsets.only(top: 8),
       child: ListView(
         physics: ClampingScrollPhysics(),
         children: [
           Container(
-            margin: EdgeInsets.only(left: 16, right: 26, top: 16),
+            margin: EdgeInsets.only(left: 16, right: 30, top: 33),
             child: Row(children: [
               IconButton(
                   iconSize: 30,
@@ -29,7 +28,7 @@ class _ViewDetialsState extends State<ViewDetials> {
                   }),
               Text(
                 "MT4 Standard Account",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               ),
               Spacer(),
               IconButton(
@@ -39,6 +38,27 @@ class _ViewDetialsState extends State<ViewDetials> {
                   ),
                   onPressed: () {})
             ]),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 45),
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Color.fromRGBO(12, 17, 55, 1)),
+                  height: 77,
+                  width: 77,
+                  child: FittedBox(
+                      fit: BoxFit.fill,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(30),
+                          child: Image(
+                              image: AssetImage('assets/images/logo.png')))),
+                ),
+              ),
+            ],
           ),
         ],
       ),

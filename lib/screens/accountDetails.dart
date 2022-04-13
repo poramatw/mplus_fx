@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/viewDetails.dart';
@@ -15,51 +15,50 @@ class _AccountDetailsState extends State<AccountDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(top: 8),
         child: ListView(
           physics: ClampingScrollPhysics(),
           children: [
-            Container(
-                margin: EdgeInsets.only(left: 16, right: 26, top: 24),
-                child: Row(
-                  children: [
-                    IconButton(
-                        iconSize: 30,
-                        icon: Icon(Icons.navigate_before),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        }),
-                    Text(
-                      "MplusFX",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                    ),
-                    Spacer(),
-                    Container(
-                      height: 39,
-                      width: 39,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage('assets/images/logo.png'))),
-                    ),
-                    SizedBox(
-                      height: 25,
-                    )
-                  ],
-                )),
-            //CardView
-            SizedBox(
-              height: 33,
-            ),
             Padding(
-                padding: EdgeInsets.only(left: 30, bottom: 16),
+              padding: const EdgeInsets.only(
+                  left: 16, top: 32, right: 30, bottom: 33),
+              child: Container(
+                  //margin: EdgeInsets.only(left: 16, right: 26, top: 32),
+                  child: Row(
+                children: [
+                  IconButton(
+                      iconSize: 30,
+                      icon: Icon(Icons.navigate_before),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      }),
+                  Text(
+                    "MplusFX",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                  ),
+                  Spacer(),
+                  Container(
+                    height: 39,
+                    width: 39,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/logo.png'))),
+                  ),
+                ],
+              )),
+            ),
+            //CardView
+
+            Padding(
+                padding: EdgeInsets.only(
+                  left: 30,
+                ),
                 child: Text(
                   "Accounts",
                   style: TextStyle(fontSize: 18),
                 )),
             SizedBox(
-              height: 62,
+              height: 42,
             ),
             Container(
               height: 205,
@@ -142,6 +141,68 @@ class _AccountDetailsState extends State<AccountDetails> {
                           ],
                         ));
                   }),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 39, top: 22),
+              child: Text(
+                "SERVICES",
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                    color: Color.fromRGBO(27, 29, 111, 1)),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, top: 20),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 156, 168, 203),
+                        borderRadius: BorderRadius.circular(30)),
+                    height: 145,
+                    width: 145,
+                    child: Column(children: []),
+                  ),
+                  SizedBox(
+                    width: 25,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 156, 168, 203),
+                        borderRadius: BorderRadius.circular(30)),
+                    height: 145,
+                    width: 145,
+                    child: Column(children: []),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, top: 30, bottom: 30),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 156, 168, 203),
+                        borderRadius: BorderRadius.circular(30)),
+                    height: 145,
+                    width: 145,
+                    child: Column(children: []),
+                  ),
+                  SizedBox(
+                    width: 25,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 156, 168, 203),
+                        borderRadius: BorderRadius.circular(30)),
+                    height: 145,
+                    width: 145,
+                    child: Column(children: []),
+                  ),
+                ],
+              ),
             )
           ],
         ),
