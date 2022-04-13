@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 
@@ -60,6 +60,116 @@ class _ViewDetialsState extends State<ViewDetials> {
               ),
             ],
           ),
+          SizedBox(
+            height: 79,
+          ),
+          Container(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      height: 48,
+                      width: 49,
+                      child: FittedBox(
+                          fit: BoxFit.fill,
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(30),
+                              child: Image(
+                                  color: Colors.black,
+                                  image: AssetImage(
+                                      'assets/images/logoMplus.png')))),
+                    ),
+                    Text(
+                      "รายละเอียดบัญชี",
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 85, top: 17, right: 80),
+                  child: Container(
+                    width: 240,
+                    height: 240,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Row(
+                          children: [
+                            Text("ประเภทบัญชี"),
+                            Spacer(),
+                            Text("STANDARD")
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text("หมายเลขบัญชี"),
+                            Spacer(),
+                            Text("MT4-12345679")
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text("มาร์จิ้น"),
+                            Spacer(),
+                            Text("500.00")
+                          ],
+                        ),
+                        Row(
+                          children: [Text("เครดิต"), Spacer(), Text("200.00")],
+                        ),
+                        Row(
+                          children: [Text("เลเวอเลจ"), Spacer(), Text("100")],
+                        ),
+                        Row(
+                          children: [
+                            Text("ชื่อบัญชี"),
+                            Spacer(),
+                            Text("abcdefghtijkasdfasd")
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Column(
+                              children: [
+                                Text("รหัสผ่านสำหรับ"),
+                                Text("การซื้อขาย")
+                              ],
+                            ),
+                            Spacer(),
+                            Text("asdfasdfasdfasdf"),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Column(
+                              children: [
+                                Text("รหัสผ่านสำหรับ"),
+                                Text("ดูเท่านั้น")
+                              ],
+                            ),
+                            Spacer(),
+                            Text("asdffasdfasdfasdf"),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 80,
+          ),
+          FloatingActionButton(onPressed: (() {
+            Navigator.pop(context);
+          }))
         ],
       ),
     ));
