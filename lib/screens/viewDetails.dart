@@ -34,7 +34,7 @@ class _ViewDetialsState extends State<ViewDetials> {
               Spacer(),
               IconButton(
                   icon: Icon(
-                    Icons.notification_add,
+                    Icons.notification_add_outlined,
                     color: Color.fromRGBO(27, 29, 111, 1),
                   ),
                   onPressed: () {})
