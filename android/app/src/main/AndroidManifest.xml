@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mplus_fx">
    <application
-        android:label="mplus_fx"
+        android:label="MplusFX"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
