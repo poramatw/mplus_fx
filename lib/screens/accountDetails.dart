@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-//import 'package:mplus_fx/screens/viewDetails.dart';
+
 import 'package:mplus_fx/widgets/cardViewdetails.dart';
 
 import 'accountScreen.dart';
@@ -163,10 +163,16 @@ class _AccountDetailsState extends State<AccountDetails> {
                         height: 145,
                         width: 145,
                         child: Column(children: [
-                          SizedBox(
-                              height: 106,
-                              width: 35,
-                              child: Icon(Icons.account_balance_outlined)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 7),
+                            child: SizedBox(
+                              height: 86,
+                              width: 86,
+                              child: Image(
+                                  image:
+                                      AssetImage('assets/images/transfer.png')),
+                            ),
+                          ),
                           Text(
                             "โอนเงิน",
                             style: TextStyle(
@@ -189,10 +195,15 @@ class _AccountDetailsState extends State<AccountDetails> {
                         height: 145,
                         width: 145,
                         child: Column(children: [
-                          SizedBox(
-                              height: 106,
-                              width: 35,
-                              child: Icon(Icons.account_balance_outlined)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20, bottom: 8),
+                            child: SizedBox(
+                                height: 64,
+                                width: 64,
+                                child: Image(
+                                    image: AssetImage(
+                                        'assets/images/utclogo.png'))),
+                          ),
                           Text(
                             "UTC SERVICE",
                             style: TextStyle(
