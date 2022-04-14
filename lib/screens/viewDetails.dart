@@ -18,7 +18,9 @@ class _ViewDetialsState extends State<ViewDetials> {
         body: Stack(
       children: [
         Container(
-          color: amberC,
+          decoration: BoxDecoration(
+              color: amberC,
+              borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
           height: size.height * 0.33,
         ),
         Container(

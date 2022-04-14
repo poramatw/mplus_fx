@@ -83,6 +83,7 @@ class _IntroState extends State<Intro> {
               SizedBox(
                 height: 94,
               ),
+              //////////////////////////////////////////////////////////////////////////////////////////
               Expanded(
                 child: Align(
                   alignment: Alignment.bottomCenter,
@@ -121,8 +122,8 @@ class _IntroState extends State<Intro> {
                                           borderRadius:
                                               BorderRadius.circular(20),
                                           color: Color.fromRGBO(12, 17, 55, 1)),
-                                      height: 77,
-                                      width: 77,
+                                      height: 72,
+                                      width: 72,
                                       child: FittedBox(
                                           fit: BoxFit.fill,
                                           child: ClipRRect(
@@ -133,7 +134,7 @@ class _IntroState extends State<Intro> {
                                                       'assets/images/logo.png')))),
                                     ),
                                     SizedBox(
-                                      height: 12,
+                                      height: 19,
                                     ),
                                     Text(
                                       "MplusFX",
@@ -163,6 +164,9 @@ class _IntroState extends State<Intro> {
                                               child: Image(
                                                   image: AssetImage(
                                                       'assets/images/miblogo.png')))),
+                                    ),
+                                    SizedBox(
+                                      height: 37,
                                     ),
                                     Text("Mib.Social",
                                         style: TextStyle(

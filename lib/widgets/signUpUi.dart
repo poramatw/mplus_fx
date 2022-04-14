@@ -3,9 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/intro.dart';
 import 'package:mplus_fx/screens/signIn.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class LoginUi extends StatelessWidget {
-  const LoginUi({Key? key}) : super(key: key);
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -136,22 +137,25 @@ class LoginUi extends StatelessWidget {
                       children: [
                         Text(
                           "Already have account? ",
-                          style: TextStyle(fontSize: 12, color: Colors.white),
+                          style: GoogleFonts.poppins(
+                            fontSize: 12,
+                            color: Colors.white,
+                          ),
                         ),
                         GestureDetector(
-                          onTap: (() {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return SignIn();
-                            }));
-                          }),
-                          child: Text("Login",
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: 12,
-                                color: Colors.white,
-                              )),
-                        )
+                            onTap: (() {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return SignIn();
+                              }));
+                            }),
+                            child: Text(
+                              "Login",
+                              style: GoogleFonts.poppins(
+                                  decoration: TextDecoration.underline,
+                                  fontSize: 12,
+                                  color: Colors.white),
+                            ))
                       ],
                     ),
                   ]),
