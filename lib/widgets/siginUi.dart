@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/accountDetails.dart';
+import 'package:mplus_fx/screens/intro.dart';
 import 'package:mplus_fx/screens/welcomeLogin.dart';
 
 class SignInUi extends StatelessWidget {
@@ -107,7 +108,7 @@ class SignInUi extends StatelessWidget {
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return AccountDetails();
+                      return Intro();
                     }));
                   },
                   child: Container(
