@@ -13,9 +13,15 @@ class AccountDetails extends StatefulWidget {
 class _AccountDetailsState extends State<AccountDetails> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Container(
-        child: ListView(
+      body: Stack(children: [
+        Container(
+          //decoration: BoxDecoration(borderRadius: BorderRadius.circular(22)),
+          color: Color.fromRGBO(22, 29, 111, 1),
+          height: size.height * 0.33,
+        ),
+        ListView(
           physics: ClampingScrollPhysics(),
           children: [
             Padding(
@@ -26,6 +32,7 @@ class _AccountDetailsState extends State<AccountDetails> {
                   child: Row(
                 children: [
                   IconButton(
+                      color: Colors.white,
                       iconSize: 30,
                       icon: Icon(Icons.navigate_before),
                       onPressed: () {
@@ -33,7 +40,10 @@ class _AccountDetailsState extends State<AccountDetails> {
                       }),
                   Text(
                     "MplusFX",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600),
                   ),
                   Spacer(),
                   Container(
@@ -55,7 +65,7 @@ class _AccountDetailsState extends State<AccountDetails> {
                 ),
                 child: Text(
                   "Accounts",
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 )),
             SizedBox(
               height: 42,
@@ -206,7 +216,7 @@ class _AccountDetailsState extends State<AccountDetails> {
             )
           ],
         ),
-      ),
+      ]),
     );
   }
 }
