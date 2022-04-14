@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/welcomeLogin.dart';
 
+import 'screens/accountScreen.dart';
+
 void main() {
   runApp(Main());
 }

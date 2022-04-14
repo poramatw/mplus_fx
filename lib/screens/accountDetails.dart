@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 //import 'package:mplus_fx/screens/viewDetails.dart';
 import 'package:mplus_fx/widgets/cardViewdetails.dart';
 
+import 'accountScreen.dart';
+
 class AccountDetails extends StatefulWidget {
   const AccountDetails({Key? key}) : super(key: key);
 
@@ -14,7 +16,7 @@ class AccountDetails extends StatefulWidget {
 class _AccountDetailsState extends State<AccountDetails> {
   Color amberC = Color.fromRGBO(255, 193, 79, 1);
   Color mainColor = Color.fromRGBO(22, 29, 111, 1);
-  Color boxColor = Color.fromARGB(169, 158, 159, 162);
+  Color boxColor = Color.fromARGB(245, 235, 235, 229);
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -53,8 +55,16 @@ class _AccountDetailsState extends State<AccountDetails> {
                           fontWeight: FontWeight.w600),
                     ),
                     Spacer(),
-                    CircleAvatar(
-                      child: Icon(Icons.person_off_outlined),
+                    GestureDetector(
+                      onTap: (() {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return AccountContact();
+                        }));
+                      }),
+                      child: CircleAvatar(
+                        child: Icon(Icons.person_off_outlined),
+                      ),
                     )
                   ],
                 )),
