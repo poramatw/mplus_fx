@@ -18,6 +18,7 @@ class CardViewdetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return SizedBox(
       height: 205,
       child: ListView.builder(
@@ -27,8 +28,7 @@ class CardViewdetails extends StatelessWidget {
           itemBuilder: (context, index) {
             return Container(
                 margin: EdgeInsets.only(right: 15, left: 15),
-                height: 205,
-                width: 200,
+                width: size.width * 0.45,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30), color: color),
                 child: Stack(

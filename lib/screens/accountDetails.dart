@@ -28,6 +28,7 @@ class _AccountDetailsState extends State<AccountDetails> {
               color: mainColor,
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
           height: size.height * 0.33,
+          width: size.width,
         ),
         Container(
           height: size.height,
@@ -87,7 +88,7 @@ class _AccountDetailsState extends State<AccountDetails> {
                         ),
                       )),
                   SizedBox(
-                    height: 32,
+                    height: 62,
                   ),
                   CardViewdetails("Standard", "123456789", 2000.59, amberC),
                   /////////////////////////////////////////////////////////////////////////////////////////////
