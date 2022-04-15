@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:slide_to_confirm/slide_to_confirm.dart';
+
 class ViewDetials extends StatefulWidget {
   const ViewDetials({Key? key}) : super(key: key);
 
@@ -191,10 +193,19 @@ class _ViewDetialsState extends State<ViewDetials> {
               SizedBox(
                 height: 80,
               ),
-              FloatingActionButton(onPressed: (() {
-                Navigator.pop(context);
-              }))
             ],
+          ),
+        ),
+        Center(
+          child: Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: ConfirmationSlider(
+                onConfirmation: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
           ),
         ),
       ],

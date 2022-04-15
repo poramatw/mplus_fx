@@ -49,6 +49,7 @@ dev_dependencies:
   google_fonts: ^2.3.1
   intl: ^0.17.0 #format number
   responsive_framework: ^0.1.7
+  slide_to_confirm: ^1.1.0
   
 
 # For information on the generic Dart part of this file, see the
