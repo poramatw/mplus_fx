@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_unnecessary_containers, deprecated_member_use
 
 import 'package:flutter/material.dart';
 
@@ -106,14 +106,14 @@ class _AccountDetailsState extends State<AccountDetails> {
                     padding: const EdgeInsets.only(left: 30, top: 20),
                     child: Row(
                       children: [
-                        GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            decoration: BoxDecoration(
-                                color: boxColor,
+                        SizedBox(
+                          height: 145,
+                          width: 145,
+                          child: FlatButton(
+                            color: boxColor,
+                            shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            height: 145,
-                            width: 145,
+                            onPressed: () {},
                             child: Column(children: [
                               Padding(
                                 padding:
@@ -137,14 +137,14 @@ class _AccountDetailsState extends State<AccountDetails> {
                         SizedBox(
                           width: 25,
                         ),
-                        GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            decoration: BoxDecoration(
-                                color: boxColor,
+                        SizedBox(
+                          height: 145,
+                          width: 145,
+                          child: FlatButton(
+                            color: boxColor,
+                            shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            height: 145,
-                            width: 145,
+                            onPressed: () {},
                             child: Column(children: [
                               Padding(
                                 padding:
@@ -175,14 +175,14 @@ class _AccountDetailsState extends State<AccountDetails> {
                         const EdgeInsets.only(left: 30, top: 30, bottom: 30),
                     child: Row(
                       children: [
-                        GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            decoration: BoxDecoration(
-                                color: boxColor,
+                        SizedBox(
+                          height: 145,
+                          width: 145,
+                          child: FlatButton(
+                            color: boxColor,
+                            shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            height: 145,
-                            width: 145,
+                            onPressed: () {},
                             child: Column(children: [
                               Padding(
                                 padding: const EdgeInsets.only(top: 7),
@@ -207,14 +207,14 @@ class _AccountDetailsState extends State<AccountDetails> {
                         SizedBox(
                           width: 25,
                         ),
-                        GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            decoration: BoxDecoration(
-                                color: boxColor,
+                        SizedBox(
+                          height: 145,
+                          width: 145,
+                          child: FlatButton(
+                            color: boxColor,
+                            shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            height: 145,
-                            width: 145,
+                            onPressed: () {},
                             child: Column(children: [
                               Padding(
                                 padding:

@@ -140,7 +140,7 @@ class _ViewDetialsState extends State<ViewDetials> {
                               children: [
                                 Text("เครดิต"),
                                 Spacer(),
-                                Text("200.00")
+                                Text("\$200.00")
                               ],
                             ),
                             Row(

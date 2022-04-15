@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
 
@@ -112,8 +112,8 @@ class _IntroState extends State<Intro> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  GestureDetector(
-                                    onTap: () {
+                                  FlatButton(
+                                    onPressed: () {
                                       Navigator.push(context,
                                           MaterialPageRoute(builder: (context) {
                                         return AccountDetails();
