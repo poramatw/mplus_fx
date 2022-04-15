@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 
 import 'package:mplus_fx/widgets/cardViewdetails.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mplus_fx/widgets/services.dart';
+import 'package:mplus_fx/widgets/servicesTwo.dart';
+import 'package:mplus_fx/widgets/tabBar.dart';
 
 import 'accountScreen.dart';
 
@@ -38,43 +41,7 @@ class _AccountDetailsState extends State<AccountDetails> {
               ListView(
                 physics: ClampingScrollPhysics(),
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 16, top: 32, right: 30, bottom: 33),
-                    child: Container(
-                        child: Row(
-                      children: [
-                        IconButton(
-                            color: Colors.white,
-                            iconSize: 30,
-                            icon: Icon(Icons.navigate_before),
-                            onPressed: () {
-                              Navigator.pop(context);
-                            }),
-                        Text("MplusFX",
-                            style: GoogleFonts.poppins(
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600)),
-                        Spacer(),
-                        GestureDetector(
-                          onTap: (() {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return AccountContact();
-                            }));
-                          }),
-                          child: CircleAvatar(
-                            radius: 22,
-                            backgroundColor: Colors.white,
-                            child: CircleAvatar(
-                                backgroundColor: Colors.tealAccent,
-                                child: Icon(Icons.person_sharp)),
-                          ),
-                        )
-                      ],
-                    )),
-                  ),
+                  TabbarAccount(),
                   //CardView
                   Padding(
                       padding: EdgeInsets.only(
@@ -103,143 +70,8 @@ class _AccountDetailsState extends State<AccountDetails> {
                     ),
                   ),
                   ///////////////////////////////////////////////////////////////////////////////////////////////////
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30, top: 20),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          height: 145,
-                          width: 145,
-                          child: FlatButton(
-                            color: boxColor,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            onPressed: () {},
-                            child: Column(children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 38, bottom: 20),
-                                child: SizedBox(
-                                    height: 35,
-                                    width: 106,
-                                    child:
-                                        Icon(Icons.transfer_within_a_station)),
-                              ),
-                              Text(
-                                "ฝากเงิน",
-                                style: TextStyle(
-                                    color: mainColor,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600),
-                              )
-                            ]),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 25,
-                        ),
-                        SizedBox(
-                          height: 145,
-                          width: 145,
-                          child: FlatButton(
-                            color: boxColor,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            onPressed: () {},
-                            child: Column(children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 32, bottom: 15),
-                                child: SizedBox(
-                                    height: 50,
-                                    width: 50,
-                                    child: Icon(
-                                      Icons.account_balance_outlined,
-                                      size: 50,
-                                    )),
-                              ),
-                              Text(
-                                "ถอนเงิน",
-                                style: TextStyle(
-                                    color: mainColor,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600),
-                              )
-                            ]),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 30, top: 30, bottom: 30),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          height: 145,
-                          width: 145,
-                          child: FlatButton(
-                            color: boxColor,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            onPressed: () {},
-                            child: Column(children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 7),
-                                child: SizedBox(
-                                  height: 86,
-                                  width: 86,
-                                  child: Image(
-                                      image: AssetImage(
-                                          'assets/images/transfer.png')),
-                                ),
-                              ),
-                              Text(
-                                "โอนเงิน",
-                                style: TextStyle(
-                                    color: mainColor,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600),
-                              )
-                            ]),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 25,
-                        ),
-                        SizedBox(
-                          height: 145,
-                          width: 145,
-                          child: FlatButton(
-                            color: boxColor,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            onPressed: () {},
-                            child: Column(children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, bottom: 8),
-                                child: SizedBox(
-                                    height: 64,
-                                    width: 64,
-                                    child: Image(
-                                        image: AssetImage(
-                                            'assets/images/utclogo.png'))),
-                              ),
-                              Text(
-                                "UTC SERVICE",
-                                style: TextStyle(
-                                    color: mainColor,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600),
-                              )
-                            ]),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
+                  ServiceGroup1(),
+                  ServiceGroup2()
                 ],
               ),
             ],
