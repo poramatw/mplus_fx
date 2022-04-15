@@ -88,6 +88,7 @@ class SignUp extends StatelessWidget {
                       width: 270,
                       height: 44,
                       child: TextFormField(
+                        obscureText: true,
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.key,
