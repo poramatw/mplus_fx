@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/accountDetails.dart';
@@ -112,19 +112,19 @@ class SignInUi extends StatelessWidget {
                           return AccountDetails();
                         }));
                       },
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return Intro();
-                          }));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(22),
-                              color: Colors.amber),
-                          height: 44,
-                          width: 140,
+                      child: SizedBox(
+                        height: 44,
+                        width: 140,
+                        child: FlatButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(22)),
+                          color: Color.fromRGBO(255, 193, 79, 1),
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return Intro();
+                            }));
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             // ignore: prefer_const_literals_to_create_immutables

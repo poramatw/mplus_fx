@@ -48,6 +48,7 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   google_fonts: ^2.3.1
   intl: ^0.17.0 #format number
+  responsive_framework: ^0.1.7
   
 
 # For information on the generic Dart part of this file, see the
