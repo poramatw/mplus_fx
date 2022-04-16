@@ -15,6 +15,7 @@ class _ServiceGroupState extends State<ServiceGroup1> {
   Color boxColor = Color.fromARGB(245, 235, 235, 229);
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(left: 30, top: 20),
       child: Row(
@@ -46,7 +47,7 @@ class _ServiceGroupState extends State<ServiceGroup1> {
             ),
           ),
           SizedBox(
-            width: 25,
+            width: size.width * 0.065,
           ),
           SizedBox(
             height: 145,

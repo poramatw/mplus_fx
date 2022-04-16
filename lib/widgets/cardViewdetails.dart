@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, must_be_immutable, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, must_be_immutable, deprecated_member_use, unused_local_variable
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -21,6 +21,7 @@ class CardViewdetails extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return SizedBox(
       height: 205,
+      width: 200,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.only(left: 15, right: 15),
@@ -28,7 +29,7 @@ class CardViewdetails extends StatelessWidget {
           itemBuilder: (context, index) {
             return Container(
                 margin: EdgeInsets.only(right: 15, left: 15),
-                width: size.width * 0.45,
+                width: 200,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30), color: color),
                 child: Stack(

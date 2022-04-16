@@ -28,7 +28,7 @@ class _IntroState extends State<Intro> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       SizedBox(
-                        height: 88,
+                        height: size.height * 0.1,
                       ),
                       Container(
                         decoration: BoxDecoration(
@@ -45,7 +45,7 @@ class _IntroState extends State<Intro> {
                                         AssetImage('assets/images/logo.png')))),
                       ),
                       SizedBox(
-                        height: 16,
+                        height: size.height * 0.02,
                       ),
                       Text(
                         "MplusFX",
@@ -54,44 +54,41 @@ class _IntroState extends State<Intro> {
                             fontSize: 30,
                             color: Colors.white),
                       ),
-
-                      Expanded(
-                        child: Align(
-                          alignment: Alignment.center,
-                          child: SizedBox(
-                            height: 120,
-                            width: 315,
-                            child: Column(
-                              // ignore: prefer_const_literals_to_create_immutables
-                              children: [
-                                Text(
-                                  "MplusFX LOW SPREAD",
-                                  style: TextStyle(
-                                      fontSize: 16, color: Colors.white),
-                                ),
-                                Text(
-                                  "สามารถส่งคำสั่งได้ตลอด ราคาส่งตรงจาก LP",
-                                  style: TextStyle(
-                                      fontSize: 16, color: Colors.white),
-                                ),
-                                Text(
-                                  "ทดลองเทรดฟรี ฝากเงินเพื่อรับโบนัส 30%",
-                                  style: TextStyle(
-                                      fontSize: 16, color: Colors.white),
-                                ),
-                                Text(
-                                  "สูงสุดถึง \$1000 และโปรโมชั่นอีกมากมายเพียง",
-                                  style: TextStyle(
-                                      fontSize: 16, color: Colors.white),
-                                ),
-                                Text(
-                                  "เทรดกับเรา",
-                                  style: TextStyle(
-                                      fontSize: 16, color: Colors.white),
-                                ),
-                              ],
+                      SizedBox(
+                        height: size.height * 0.0112,
+                      ),
+                      SizedBox(
+                        height: 120,
+                        width: 315,
+                        child: Column(
+                          // ignore: prefer_const_literals_to_create_immutables
+                          children: [
+                            Text(
+                              "MplusFX LOW SPREAD",
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
                             ),
-                          ),
+                            Text(
+                              "สามารถส่งคำสั่งได้ตลอด ราคาส่งตรงจาก LP",
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            ),
+                            Text(
+                              "ทดลองเทรดฟรี ฝากเงินเพื่อรับโบนัส 30%",
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            ),
+                            Text(
+                              "สูงสุดถึง  และโปรโมชั่นอีกมากมายเพียง",
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            ),
+                            Text(
+                              "เทรดกับเรา",
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            ),
+                          ],
                         ),
                       ),
 
@@ -108,7 +105,7 @@ class _IntroState extends State<Intro> {
                               child: Column(
                                 children: [
                                   SizedBox(
-                                    height: size.height * 0.05,
+                                    height: size.height * 0.04,
                                   ),
                                   Text(
                                     "Choose your Investment",
@@ -117,7 +114,7 @@ class _IntroState extends State<Intro> {
                                         fontSize: 16),
                                   ),
                                   SizedBox(
-                                    height: 32,
+                                    height: size.height * 0.032,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -151,7 +148,7 @@ class _IntroState extends State<Intro> {
                                                               'assets/images/logo.png')))),
                                             ),
                                             SizedBox(
-                                              height: 19,
+                                              height: size.height * 0.019,
                                             ),
                                             Text(
                                               "MplusFX",
@@ -214,7 +211,7 @@ class _IntroState extends State<Intro> {
                                                             'assets/images/utclogo.png')))),
                                           ),
                                           SizedBox(
-                                            height: 15,
+                                            height: size.height * 0.015,
                                           ),
                                           Text("UTC",
                                               style: TextStyle(

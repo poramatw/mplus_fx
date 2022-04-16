@@ -8,8 +8,6 @@ import 'package:mplus_fx/widgets/services.dart';
 import 'package:mplus_fx/widgets/servicesTwo.dart';
 import 'package:mplus_fx/widgets/tabBar.dart';
 
-import 'accountScreen.dart';
-
 class AccountDetails extends StatefulWidget {
   const AccountDetails({Key? key}) : super(key: key);
 
@@ -33,49 +31,45 @@ class _AccountDetailsState extends State<AccountDetails> {
           height: size.height * 0.33,
           width: size.width,
         ),
-        Container(
-          height: size.height,
-          width: size.width,
-          child: Stack(
-            children: [
-              ListView(
-                physics: ClampingScrollPhysics(),
-                children: [
-                  TabbarAccount(),
-                  //CardView
-                  Padding(
-                      padding: EdgeInsets.only(
-                        left: 30,
-                      ),
-                      child: Text(
-                        "Accounts",
-                        style: GoogleFonts.poppins(
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
-                      )),
-                  SizedBox(
-                    height: 62,
-                  ),
-                  CardViewdetails("Standard", "123456789", 2000.59, amberC),
-                  /////////////////////////////////////////////////////////////////////////////////////////////
-                  Padding(
-                    padding: const EdgeInsets.only(left: 39, top: 22),
-                    child: Text(
-                      "SERVICES",
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w600,
-                          color: Color.fromRGBO(27, 29, 111, 1)),
+        Stack(
+          children: [
+            ListView(
+              physics: ClampingScrollPhysics(),
+              children: [
+                TabbarAccount(),
+                //CardView
+                Padding(
+                    padding: EdgeInsets.only(
+                      left: 30,
                     ),
+                    child: Text(
+                      "Accounts",
+                      style: GoogleFonts.poppins(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
+                    )),
+                SizedBox(
+                  height: size.height * 0.062,
+                ),
+                CardViewdetails("Standard", "123456789", 2000.59, amberC),
+                /////////////////////////////////////////////////////////////////////////////////////////////
+                Padding(
+                  padding: const EdgeInsets.only(left: 39, top: 22),
+                  child: Text(
+                    "SERVICES",
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                        color: Color.fromRGBO(27, 29, 111, 1)),
                   ),
-                  ///////////////////////////////////////////////////////////////////////////////////////////////////
-                  ServiceGroup1(),
-                  ServiceGroup2()
-                ],
-              ),
-            ],
-          ),
+                ),
+                ///////////////////////////////////////////////////////////////////////////////////////////////////
+                ServiceGroup1(),
+                ServiceGroup2()
+              ],
+            ),
+          ],
         ),
       ]),
     );

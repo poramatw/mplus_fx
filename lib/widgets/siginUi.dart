@@ -15,170 +15,165 @@ class SignInUi extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            SizedBox(
-              height: size.height,
-              width: size.width,
-              child: ListView(
-                physics: ClampingScrollPhysics(),
-                children: [
-                  Column(children: [
-                    SizedBox(
-                      height: 88,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Color.fromRGBO(12, 17, 55, 1)),
-                      height: 145,
-                      width: 145,
-                      child: FittedBox(
-                          fit: BoxFit.fill,
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
-                              child: Image(
-                                  image:
-                                      AssetImage('assets/images/logo.png')))),
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Text(
-                      "MplusFX",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 30,
-                          color: Colors.white),
-                    ),
-                    SizedBox(
-                      height: 21,
-                    ),
-                    Text(
-                      "Sign In",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 35,
-                          color: Colors.white),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      "Enjoy our application",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    SizedBox(
-                      height: 38,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(22),
-                          color: Colors.white),
-                      width: 270,
-                      height: 44,
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                            prefixIcon: Icon(
-                              Icons.mail_outline_outlined,
-                              color: Colors.black,
-                            ),
-                            labelText: 'Email'),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(22),
-                          color: Colors.white),
-                      width: 270,
-                      height: 44,
-                      child: TextFormField(
-                        obscureText: true,
-                        decoration: InputDecoration(
-                            prefixIcon: Icon(
-                              Icons.key,
-                              color: Colors.black,
-                            ),
-                            labelText: 'Password'),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 48,
-                    ),
-                    GestureDetector(
-                      onDoubleTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return AccountDetails();
-                        }));
-                      },
-                      child: SizedBox(
-                        height: 44,
-                        width: 140,
-                        child: FlatButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(22)),
-                          color: Color.fromRGBO(255, 193, 79, 1),
-                          onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return Intro();
-                            }));
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                              Text(
-                                "Sign In",
-                                style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white),
-                              ),
-                            ],
+            ListView(
+              physics: ClampingScrollPhysics(),
+              children: [
+                Column(children: [
+                  SizedBox(
+                    height: size.height * 0.1,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color.fromRGBO(12, 17, 55, 1)),
+                    height: 145,
+                    width: 145,
+                    child: FittedBox(
+                        fit: BoxFit.fill,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(30),
+                            child: Image(
+                                image: AssetImage('assets/images/logo.png')))),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.02,
+                  ),
+                  Text(
+                    "MplusFX",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 30,
+                        color: Colors.white),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.022,
+                  ),
+                  Text(
+                    "Sign In",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 35,
+                        color: Colors.white),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.004,
+                  ),
+                  Text(
+                    "Enjoy our application",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.04,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(22),
+                        color: Colors.white),
+                    width: 270,
+                    height: 44,
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          prefixIcon: Icon(
+                            Icons.mail_outline_outlined,
+                            color: Colors.black,
                           ),
+                          labelText: 'Email'),
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.02,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(22),
+                        color: Colors.white),
+                    width: 270,
+                    height: 44,
+                    child: TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          prefixIcon: Icon(
+                            Icons.key,
+                            color: Colors.black,
+                          ),
+                          labelText: 'Password'),
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.05,
+                  ),
+                  GestureDetector(
+                    onDoubleTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return AccountDetails();
+                      }));
+                    },
+                    child: SizedBox(
+                      height: 44,
+                      width: 140,
+                      child: FlatButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(22)),
+                        color: Color.fromRGBO(255, 193, 79, 1),
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return Intro();
+                          }));
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          // ignore: prefer_const_literals_to_create_immutables
+                          children: [
+                            Text(
+                              "Sign In",
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.white),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 41,
-                    ),
-                    Text(
-                      "Forgot your password?",
-                      style: TextStyle(fontSize: 12, color: Colors.white),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      // ignore: prefer_const_literals_to_create_immutables
-                      children: [
-                        Text(
-                          "New user? ",
-                          style: TextStyle(fontSize: 12, color: Colors.white),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return WelcomeLogin();
-                            }));
-                          },
-                          child: Text("Create an account",
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: 12,
-                                color: Colors.white,
-                              )),
-                        )
-                      ],
-                    ),
-                  ]),
-                ],
-              ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.04,
+                  ),
+                  Text(
+                    "Forgot your password?",
+                    style: TextStyle(fontSize: 12, color: Colors.white),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.015,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      Text(
+                        "New user? ",
+                        style: TextStyle(fontSize: 12, color: Colors.white),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return WelcomeLogin();
+                          }));
+                        },
+                        child: Text("Create an account",
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 12,
+                              color: Colors.white,
+                            )),
+                      )
+                    ],
+                  ),
+                ]),
+              ],
             ),
           ],
         ),
