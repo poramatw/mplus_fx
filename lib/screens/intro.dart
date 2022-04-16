@@ -119,17 +119,17 @@ class _IntroState extends State<Intro> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      FlatButton(
-                                        onPressed: () {
-                                          Navigator.push(context,
-                                              MaterialPageRoute(
-                                                  builder: (context) {
-                                            return AccountDetails();
-                                          }));
-                                        },
-                                        child: Column(
-                                          children: [
-                                            Container(
+                                      Column(
+                                        children: [
+                                          FlatButton(
+                                            onPressed: (() {
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) {
+                                                return AccountDetails();
+                                              }));
+                                            }),
+                                            child: Container(
                                               decoration: BoxDecoration(
                                                   borderRadius:
                                                       BorderRadius.circular(20),
@@ -147,17 +147,17 @@ class _IntroState extends State<Intro> {
                                                           image: AssetImage(
                                                               'assets/images/logo.png')))),
                                             ),
-                                            SizedBox(
-                                              height: size.height * 0.019,
-                                            ),
-                                            Text(
-                                              "MplusFX",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
-                                                  fontSize: 16),
-                                            )
-                                          ],
-                                        ),
+                                          ),
+                                          SizedBox(
+                                            height: size.height * 0.019,
+                                          ),
+                                          Text(
+                                            "MplusFX",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 16),
+                                          )
+                                        ],
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -193,22 +193,25 @@ class _IntroState extends State<Intro> {
                                       ),
                                       Column(
                                         children: [
-                                          Container(
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(20),
+                                          FlatButton(
+                                            onPressed: (() {}),
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(20),
+                                              ),
+                                              height: 80,
+                                              width: 80,
+                                              child: FittedBox(
+                                                  fit: BoxFit.fill,
+                                                  child: ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              30),
+                                                      child: Image(
+                                                          image: AssetImage(
+                                                              'assets/images/utclogo.png')))),
                                             ),
-                                            height: 80,
-                                            width: 80,
-                                            child: FittedBox(
-                                                fit: BoxFit.fill,
-                                                child: ClipRRect(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            30),
-                                                    child: Image(
-                                                        image: AssetImage(
-                                                            'assets/images/utclogo.png')))),
                                           ),
                                           SizedBox(
                                             height: size.height * 0.015,

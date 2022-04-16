@@ -29,7 +29,6 @@ class _AccountDetailsState extends State<AccountDetails> {
               color: mainColor,
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
           height: size.height * 0.33,
-          width: size.width,
         ),
         Stack(
           children: [

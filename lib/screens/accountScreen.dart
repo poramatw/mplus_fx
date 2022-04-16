@@ -63,7 +63,7 @@ class _AccountContactState extends State<AccountContact> {
                                       children: [
                                         Icon(Icons.account_circle,
                                             color: Colors.white),
-                                        Text("ชื่อเจ้าของบัญชี",
+                                        Text("  ชื่อเจ้าของบัญชี",
                                             style:
                                                 TextStyle(color: Colors.white)),
                                       ],
@@ -71,7 +71,7 @@ class _AccountContactState extends State<AccountContact> {
                                     Row(
                                       children: [
                                         Icon(Icons.phone, color: Colors.white),
-                                        Text("เบอรโทรศัพท์",
+                                        Text("  เบอรโทรศัพท์",
                                             style:
                                                 TextStyle(color: Colors.white)),
                                       ],
@@ -79,7 +79,7 @@ class _AccountContactState extends State<AccountContact> {
                                     Row(
                                       children: [
                                         Icon(Icons.drafts, color: Colors.white),
-                                        Text("อีเมล",
+                                        Text("  อีเมล",
                                             style:
                                                 TextStyle(color: Colors.white)),
                                       ],
@@ -87,7 +87,7 @@ class _AccountContactState extends State<AccountContact> {
                                     Row(
                                       children: [
                                         Icon(Icons.cake, color: Colors.white),
-                                        Text("วันเดือนปีเกิด",
+                                        Text("  วันเดือนปีเกิด",
                                             style:
                                                 TextStyle(color: Colors.white)),
                                       ],
@@ -96,7 +96,7 @@ class _AccountContactState extends State<AccountContact> {
                                       children: [
                                         Icon(Icons.transgender,
                                             color: Colors.white),
-                                        Text("เพศ",
+                                        Text("  เพศ",
                                             style:
                                                 TextStyle(color: Colors.white)),
                                       ],
@@ -104,7 +104,7 @@ class _AccountContactState extends State<AccountContact> {
                                     Row(
                                       children: [
                                         Icon(Icons.flag, color: Colors.white),
-                                        Text("สัญชาติ",
+                                        Text("  สัญชาติ",
                                             style:
                                                 TextStyle(color: Colors.white)),
                                       ],
@@ -116,7 +116,7 @@ class _AccountContactState extends State<AccountContact> {
                                           color: Colors.white,
                                         ),
                                         Text(
-                                          "ที่อยู่",
+                                          "  ที่อยู่",
                                           style: TextStyle(color: Colors.white),
                                         ),
                                       ],
@@ -187,26 +187,32 @@ class _AccountContactState extends State<AccountContact> {
                           SizedBox(
                             height: size.height * 0.1,
                           ),
-                          Container(
-                            height: 50,
-                            width: 315,
-                            decoration: BoxDecoration(
-                                color: amberC,
+                          OutlineButton(
+                            shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            child: Center(
+                            borderSide: BorderSide(color: Colors.white),
+                            onPressed: () {},
+                            child: SizedBox(
+                              height: 50,
+                              width: 315,
+                              child: Center(
                                 child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text("CONTACT US",
-                                    style: TextStyle(
-                                        color: mainColor,
-                                        fontWeight: FontWeight.w600)),
-                                Icon(
-                                  Icons.keyboard_double_arrow_right,
-                                  color: mainColor,
-                                )
-                              ],
-                            )),
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "CONTACT US",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                    Icon(
+                                      Icons.keyboard_double_arrow_right,
+                                      color: Colors.white,
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
                           ),
                           SizedBox(
                             height: size.height * 0.035,
@@ -221,11 +227,9 @@ class _AccountContactState extends State<AccountContact> {
                                 return WelcomeLogin();
                               }));
                             },
-                            child: Container(
+                            child: SizedBox(
                               height: 50,
                               width: 315,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30)),
                               child: Center(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
