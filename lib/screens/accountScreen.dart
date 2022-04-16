@@ -187,35 +187,35 @@ class _AccountContactState extends State<AccountContact> {
                           SizedBox(
                             height: size.height * 0.1,
                           ),
-                          OutlineButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            borderSide: BorderSide(color: Colors.white),
-                            onPressed: () {},
-                            child: SizedBox(
-                              height: 50,
-                              width: 315,
-                              child: Center(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "CONTACT US",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w600),
-                                    ),
-                                    Icon(
-                                      Icons.keyboard_double_arrow_right,
-                                      color: Colors.white,
-                                    )
-                                  ],
+                          FlatButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30)),
+                              color: amberC,
+                              onPressed: () {},
+                              child: SizedBox(
+                                height: 50,
+                                width: 315,
+                                child: Center(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "CONTACT US",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                      Icon(
+                                        Icons.keyboard_double_arrow_right,
+                                        color: Colors.white,
+                                      )
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ),
-                          ),
+                              )),
                           SizedBox(
-                            height: size.height * 0.035,
+                            height: size.height * 0.03,
                           ),
                           OutlineButton(
                             shape: RoundedRectangleBorder(
