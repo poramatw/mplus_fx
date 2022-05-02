@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:mplus_fx/screens/welcomeLogin.dart';
 import 'package:mplus_fx/screens/editDataUser.dart';
 
 import '../theme/theme.dart';
@@ -197,7 +196,7 @@ class _AccountContactState extends State<AccountContact> {
                               onPressed: () {
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
-                                  return editDataUser();
+                                  return EditDataUser();
                                 }));
                               },
                               child: SizedBox(
