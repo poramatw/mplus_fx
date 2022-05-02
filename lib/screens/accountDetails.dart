@@ -8,6 +8,8 @@ import 'package:mplus_fx/widgets/services.dart';
 import 'package:mplus_fx/widgets/servicesTwo.dart';
 import 'package:mplus_fx/widgets/tabBar.dart';
 
+import '../theme/theme.dart';
+
 class AccountDetails extends StatefulWidget {
   const AccountDetails({Key? key}) : super(key: key);
 
@@ -16,9 +18,6 @@ class AccountDetails extends StatefulWidget {
 }
 
 class _AccountDetailsState extends State<AccountDetails> {
-  Color amberC = Color.fromRGBO(255, 193, 79, 1);
-  Color mainColor = Color.fromRGBO(22, 29, 111, 1);
-  Color boxColor = Color.fromARGB(245, 235, 235, 229);
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -51,7 +50,7 @@ class _AccountDetailsState extends State<AccountDetails> {
                 SizedBox(
                   height: size.height * 0.062,
                 ),
-                CardViewdetails("Standard", "123456789", 2000.59, amberC),
+                CardViewdetails(),
                 /////////////////////////////////////////////////////////////////////////////////////////////
                 Padding(
                   padding: const EdgeInsets.only(left: 39, top: 22),

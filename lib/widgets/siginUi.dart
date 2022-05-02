@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/accountDetails.dart';
 import 'package:mplus_fx/screens/intro.dart';
 import 'package:mplus_fx/screens/welcomeLogin.dart';
+import 'package:mplus_fx/theme/theme.dart';
 
 class SignInUi extends StatelessWidget {
   const SignInUi({Key? key}) : super(key: key);
@@ -43,7 +44,7 @@ class SignInUi extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 30,
-                        color: Colors.white),
+                        color: whiteC),
                   ),
                   SizedBox(
                     height: size.height * 0.022,
@@ -53,22 +54,21 @@ class SignInUi extends StatelessWidget {
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 35,
-                        color: Colors.white),
+                        color: whiteC),
                   ),
                   SizedBox(
                     height: size.height * 0.004,
                   ),
                   Text(
                     "Enjoy our application",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: whiteC),
                   ),
                   SizedBox(
                     height: size.height * 0.04,
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(22),
-                        color: Colors.white),
+                        borderRadius: BorderRadius.circular(22), color: whiteC),
                     width: 270,
                     height: 44,
                     child: TextFormField(
@@ -85,8 +85,7 @@ class SignInUi extends StatelessWidget {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(22),
-                        color: Colors.white),
+                        borderRadius: BorderRadius.circular(22), color: whiteC),
                     width: 270,
                     height: 44,
                     child: TextFormField(
@@ -115,7 +114,7 @@ class SignInUi extends StatelessWidget {
                       child: FlatButton(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(22)),
-                        color: Color.fromRGBO(255, 193, 79, 1),
+                        color: amberC,
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
@@ -131,7 +130,7 @@ class SignInUi extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
-                                  color: Colors.white),
+                                  color: whiteC),
                             ),
                           ],
                         ),
@@ -143,7 +142,7 @@ class SignInUi extends StatelessWidget {
                   ),
                   Text(
                     "Forgot your password?",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                    style: TextStyle(fontSize: 12, color: whiteC),
                   ),
                   SizedBox(
                     height: size.height * 0.015,
@@ -154,7 +153,7 @@ class SignInUi extends StatelessWidget {
                     children: [
                       Text(
                         "New user? ",
-                        style: TextStyle(fontSize: 12, color: Colors.white),
+                        style: TextStyle(fontSize: 12, color: whiteC),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -167,7 +166,7 @@ class SignInUi extends StatelessWidget {
                             style: TextStyle(
                               decoration: TextDecoration.underline,
                               fontSize: 12,
-                              color: Colors.white,
+                              color: whiteC,
                             )),
                       )
                     ],
@@ -178,7 +177,7 @@ class SignInUi extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: const Color.fromRGBO(22, 29, 111, 1),
+      backgroundColor: mainColor,
     );
   }
 }

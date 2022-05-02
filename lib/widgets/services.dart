@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../theme/theme.dart';
+
 class ServiceGroup1 extends StatefulWidget {
   const ServiceGroup1({Key? key}) : super(key: key);
 
@@ -10,8 +12,6 @@ class ServiceGroup1 extends StatefulWidget {
 }
 
 class _ServiceGroupState extends State<ServiceGroup1> {
-  Color amberC = Color.fromRGBO(255, 193, 79, 1);
-  Color mainColor = Color.fromRGBO(22, 29, 111, 1);
   Color boxColor = Color.fromARGB(245, 235, 235, 229);
   @override
   Widget build(BuildContext context) {
@@ -28,6 +28,7 @@ class _ServiceGroupState extends State<ServiceGroup1> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
               onPressed: () {},
+              // ignore: prefer_const_literals_to_create_immutables
               child: Column(children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 38, bottom: 20),
@@ -57,6 +58,7 @@ class _ServiceGroupState extends State<ServiceGroup1> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
               onPressed: () {},
+              // ignore: prefer_const_literals_to_create_immutables
               child: Column(children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 32, bottom: 15),
