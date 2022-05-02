@@ -22,6 +22,7 @@ class _AccountDetailsState extends State<AccountDetails> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Stack(children: [
         Container(
@@ -65,7 +66,7 @@ class _AccountDetailsState extends State<AccountDetails> {
                 ),
                 ///////////////////////////////////////////////////////////////////////////////////////////////////
                 ServiceGroup1(),
-                ServiceGroup2()
+                ServiceGroup2(),
               ],
             ),
           ],

@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/screens/accountDetails.dart';
+
 import 'package:mplus_fx/screens/intro.dart';
-import 'package:mplus_fx/screens/welcomeLogin.dart';
+
 import 'package:mplus_fx/theme/theme.dart';
+import 'package:mplus_fx/widgets/signUpUi.dart';
 
 class SignInUi extends StatelessWidget {
   const SignInUi({Key? key}) : super(key: key);
@@ -101,39 +102,31 @@ class SignInUi extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.05,
                   ),
-                  GestureDetector(
-                    onDoubleTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return AccountDetails();
-                      }));
-                    },
-                    child: SizedBox(
-                      height: 44,
-                      width: 140,
-                      child: FlatButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(22)),
-                        color: amberC,
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return Intro();
-                          }));
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Text(
-                              "Sign In",
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  color: whiteC),
-                            ),
-                          ],
-                        ),
+                  SizedBox(
+                    height: 44,
+                    width: 140,
+                    child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(22)),
+                      color: amberC,
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return Intro();
+                        }));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Text(
+                            "Sign In",
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: whiteC),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -159,7 +152,7 @@ class SignInUi extends StatelessWidget {
                         onTap: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return WelcomeLogin();
+                            return SignUp();
                           }));
                         },
                         child: Text("Create an account",

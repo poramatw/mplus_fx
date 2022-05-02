@@ -1,10 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
 
 import 'package:flutter/material.dart';
+
 import 'package:mplus_fx/screens/welcomeLogin.dart';
 import 'package:mplus_fx/screens/editDataUser.dart';
 
 import '../theme/theme.dart';
+import '../widgets/signUpUi.dart';
 
 class AccountContact extends StatefulWidget {
   const AccountContact({Key? key}) : super(key: key);
@@ -230,7 +232,7 @@ class _AccountContactState extends State<AccountContact> {
                             onPressed: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return WelcomeLogin();
+                                return SignUp();
                               }));
                             },
                             child: SizedBox(

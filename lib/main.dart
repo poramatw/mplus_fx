@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/database/data.dart';
-import 'package:mplus_fx/database/dataTest.dart';
-import 'package:mplus_fx/screens/welcomeLogin.dart';
+
+import 'package:mplus_fx/widgets/signUpUi.dart';
 //import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
@@ -16,7 +15,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WelcomeLogin(),
+      home: SignUp(),
       theme: ThemeData(fontFamily: 'Kanit'),
     );
   }
