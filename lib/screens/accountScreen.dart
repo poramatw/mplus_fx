@@ -2,9 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:mplus_fx/screens/welcomeLogin.dart';
-import 'package:mplus_fx/screens/editDataUser.dart';
-
 import '../theme/theme.dart';
 import '../widgets/signUpUi.dart';
 
@@ -194,12 +191,7 @@ class _AccountContactState extends State<AccountContact> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30)),
                               color: amberC,
-                              onPressed: () {
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) {
-                                  return editDataUser();
-                                }));
-                              },
+                              onPressed: () {},
                               child: SizedBox(
                                 height: 50,
                                 width: 315,
