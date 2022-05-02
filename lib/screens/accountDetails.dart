@@ -70,17 +70,6 @@ class _AccountDetailsState extends State<AccountDetails> {
             ),
           ],
         ),
-        Expanded(
-            child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  height: 50,
-                  width: size.width,
-                  decoration: BoxDecoration(color: mainColor),
-                  child: Column(
-                    children: [Icon(Icons.show_chart)],
-                  ),
-                )))
       ]),
     );
   }
