@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, must_be_immutable, deprecated_member_use, unused_local_variable
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -18,8 +18,10 @@ class CardViewdetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return SizedBox(
       height: 205,
+      width: 200,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.only(left: 15, right: 15),
@@ -27,7 +29,6 @@ class CardViewdetails extends StatelessWidget {
           itemBuilder: (context, index) {
             return Container(
                 margin: EdgeInsets.only(right: 15, left: 15),
-                height: 205,
                 width: 200,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30), color: color),
@@ -73,24 +74,31 @@ class CardViewdetails extends StatelessWidget {
                               return ViewDetials();
                             }));
                           },
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30),
-                                color: Colors.white),
+                          child: SizedBox(
                             height: 40,
                             width: 144,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              // ignore: prefer_const_literals_to_create_immutables
-                              children: [
-                                Text(
-                                  "View Details",
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                      color: mainColor),
-                                ),
-                              ],
+                            child: FlatButton(
+                              color: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30)),
+                              onPressed: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return ViewDetials();
+                                }));
+                              },
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "View Details",
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600,
+                                        color: mainColor),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         )),

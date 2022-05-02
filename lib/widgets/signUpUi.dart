@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/screens/accountDetails.dart';
 import 'package:mplus_fx/screens/intro.dart';
-import 'package:mplus_fx/screens/welcomeLogin.dart';
+import 'package:mplus_fx/screens/signIn.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class SignInUi extends StatelessWidget {
-  const SignInUi({Key? key}) : super(key: key);
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,21 +49,14 @@ class SignInUi extends StatelessWidget {
                     height: size.height * 0.022,
                   ),
                   Text(
-                    "Sign In",
+                    "Hello, Welcome",
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 35,
                         color: Colors.white),
                   ),
                   SizedBox(
-                    height: size.height * 0.004,
-                  ),
-                  Text(
-                    "Enjoy our application",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  SizedBox(
-                    height: size.height * 0.04,
+                    height: size.height * 0.07,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -77,7 +70,8 @@ class SignInUi extends StatelessWidget {
                             Icons.mail_outline_outlined,
                             color: Colors.black,
                           ),
-                          labelText: 'Email'),
+                          labelText: 'Email',
+                          labelStyle: TextStyle(fontWeight: FontWeight.w500)),
                     ),
                   ),
                   SizedBox(
@@ -96,80 +90,69 @@ class SignInUi extends StatelessWidget {
                             Icons.key,
                             color: Colors.black,
                           ),
-                          labelText: 'Password'),
+                          labelText: 'Password',
+                          labelStyle: TextStyle(fontWeight: FontWeight.w500)),
                     ),
                   ),
                   SizedBox(
                     height: size.height * 0.05,
                   ),
-                  GestureDetector(
-                    onDoubleTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return AccountDetails();
-                      }));
-                    },
-                    child: SizedBox(
-                      height: 44,
-                      width: 140,
-                      child: FlatButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(22)),
-                        color: Color.fromRGBO(255, 193, 79, 1),
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return Intro();
-                          }));
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Text(
-                              "Sign In",
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.white),
-                            ),
-                          ],
-                        ),
+                  SizedBox(
+                    height: 44,
+                    width: 140,
+                    child: FlatButton(
+                      color: Color.fromRGBO(255, 193, 79, 1),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(22)),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return Intro();
+                        }));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Text(
+                            "Sign Up",
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: size.height * 0.04,
-                  ),
-                  Text(
-                    "Forgot your password?",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
-                  ),
-                  SizedBox(
-                    height: size.height * 0.015,
+                    height: size.height * 0.06,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
                       Text(
-                        "New user? ",
-                        style: TextStyle(fontSize: 12, color: Colors.white),
+                        "Already have account? ",
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                          color: Colors.white,
+                        ),
                       ),
                       GestureDetector(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return WelcomeLogin();
-                          }));
-                        },
-                        child: Text("Create an account",
-                            style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 12,
-                              color: Colors.white,
-                            )),
-                      )
+                          onTap: (() {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return SignIn();
+                            }));
+                          }),
+                          child: Text(
+                            "Login",
+                            style: GoogleFonts.poppins(
+                                decoration: TextDecoration.underline,
+                                fontSize: 12,
+                                color: Colors.white),
+                          ))
                     ],
                   ),
                 ]),

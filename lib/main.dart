@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/welcomeLogin.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
   runApp(Main());
@@ -13,7 +14,6 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "main",
       home: WelcomeLogin(),
       theme: ThemeData(fontFamily: 'Kanit'),
     );
