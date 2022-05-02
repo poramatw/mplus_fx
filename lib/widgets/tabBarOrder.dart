@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mplus_fx/theme/theme.dart';
 
 class TabbarOrder extends StatefulWidget {
   const TabbarOrder({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class _TabbarOrderState extends State<TabbarOrder> {
           child: Row(
         children: [
           IconButton(
-              color: Color.fromRGBO(22, 29, 111, 1),
+              color: mainColor,
               iconSize: 30,
               icon: Icon(Icons.navigate_before),
               onPressed: () {
@@ -28,14 +29,12 @@ class _TabbarOrderState extends State<TabbarOrder> {
               }),
           Text("MT4 ORDERS",
               style: GoogleFonts.poppins(
-                  fontSize: 20,
-                  color: Color.fromRGBO(22, 29, 111, 1),
-                  fontWeight: FontWeight.w600)),
+                  fontSize: 20, color: mainColor, fontWeight: FontWeight.w600)),
           Spacer(),
           IconButton(
               icon: Icon(
                 Icons.notification_add,
-                color: Color.fromRGBO(27, 29, 111, 1),
+                color: mainColor,
               ),
               onPressed: () {
                 print("notification");

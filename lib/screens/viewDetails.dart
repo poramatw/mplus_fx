@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../theme/theme.dart';
+
 class ViewDetials extends StatefulWidget {
   const ViewDetials({Key? key}) : super(key: key);
 
@@ -10,7 +12,6 @@ class ViewDetials extends StatefulWidget {
 }
 
 class _ViewDetialsState extends State<ViewDetials> {
-  Color amberC = Color.fromRGBO(255, 193, 79, 1);
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -61,7 +62,7 @@ class _ViewDetialsState extends State<ViewDetials> {
                         child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color.fromRGBO(12, 17, 55, 1)),
+                              color: mainColor),
                           height: 77,
                           width: 77,
                           child: FittedBox(

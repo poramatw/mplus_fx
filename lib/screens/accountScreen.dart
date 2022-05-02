@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/welcomeLogin.dart';
 
+import '../theme/theme.dart';
+
 class AccountContact extends StatefulWidget {
   const AccountContact({Key? key}) : super(key: key);
 
@@ -11,8 +13,6 @@ class AccountContact extends StatefulWidget {
 }
 
 class _AccountContactState extends State<AccountContact> {
-  Color amberC = Color.fromRGBO(255, 193, 79, 1);
-  Color mainColor = Color.fromRGBO(22, 29, 111, 1);
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
