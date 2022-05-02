@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/intro.dart';
-import 'package:mplus_fx/screens/signIn.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mplus_fx/widgets/siginUi.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -130,7 +131,6 @@ class SignUp extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
                     children: [
                       Text(
                         "Already have account? ",
@@ -143,7 +143,7 @@ class SignUp extends StatelessWidget {
                           onTap: (() {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return SignIn();
+                              return SignInUi();
                             }));
                           }),
                           child: Text(
