@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/screens/viewPage.dart';
 
 import 'accountDetails.dart';
 
@@ -127,7 +126,7 @@ class _IntroState extends State<Intro> {
                                               Navigator.push(context,
                                                   MaterialPageRoute(
                                                       builder: (context) {
-                                                return ViewPage();
+                                                return AccountDetails();
                                               }));
                                             }),
                                             child: Container(

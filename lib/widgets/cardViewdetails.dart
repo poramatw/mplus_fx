@@ -15,22 +15,22 @@ class CardViewdetails extends StatefulWidget {
 class _CallDataState extends State<CardViewdetails> {
   List gettData = [];
 
-  // getData() async {
-  //   var url = Uri.parse("http://192.168.0.105/mplus_FX/viewDetail.php");
-  //   var response = await http.get(url);
-  //   if (response.statusCode == 200) {
-  //     setState(() {
-  //       gettData = jsonDecode(response.body);
-  //     });
-  //     return gettData;
-  //   }
-  // }
+  getData() async {
+    var url = Uri.parse("http://192.168.0.105/mplus_FX/viewDetail.php");
+    var response = await http.get(url);
+    if (response.statusCode == 200) {
+      setState(() {
+        gettData = jsonDecode(response.body);
+      });
+      return gettData;
+    }
+  }
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   getData();
-  // }
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class _CallDataState extends State<CardViewdetails> {
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.only(left: 15, right: 15),
-          itemCount: 2, //gettData.length,
+          itemCount: 2,
           itemBuilder: (context, index) {
             return Container(
                 margin: EdgeInsets.only(right: 15, left: 15),
@@ -55,7 +55,7 @@ class _CallDataState extends State<CardViewdetails> {
                         left: 30,
                         top: 40,
                         child: Text(
-                          "MT4 " + "Standard" + " Account",
+                          "MT4 Standard Account",
                           style: TextStyle(
                               fontSize: 14,
                               color: Color.fromRGBO(27, 29, 111, 1),
@@ -73,7 +73,7 @@ class _CallDataState extends State<CardViewdetails> {
                         )),
                     Center(
                       child: Text(
-                        "2,000.59" + " USD",
+                        "2,000.59 USD",
                         style: TextStyle(
                             fontSize: 24,
                             color: mainColor,

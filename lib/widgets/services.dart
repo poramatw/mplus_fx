@@ -35,7 +35,8 @@ class _ServiceGroupState extends State<ServiceGroup1> {
                   child: SizedBox(
                       height: 35,
                       width: 106,
-                      child: Icon(Icons.transfer_within_a_station)),
+                      child: Image(
+                          image: AssetImage('assets/images/chillpay.png'))),
                 ),
                 Text(
                   "ฝากเงิน",
