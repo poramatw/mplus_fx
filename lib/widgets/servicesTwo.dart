@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/economics.dart';
 
 import '../theme/theme.dart';
 
@@ -12,7 +13,6 @@ class ServiceGroup2 extends StatefulWidget {
 }
 
 class _ServiceGroup2State extends State<ServiceGroup2> {
-  Color boxColor = Color.fromARGB(245, 235, 235, 229);
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -61,7 +61,11 @@ class _ServiceGroup2State extends State<ServiceGroup2> {
               color: boxColor,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Economics();
+                }));
+              },
               // ignore: prefer_const_literals_to_create_immutables
               child: Column(children: [
                 Padding(
@@ -73,7 +77,7 @@ class _ServiceGroup2State extends State<ServiceGroup2> {
                           image: AssetImage('assets/images/utclogo.png'))),
                 ),
                 Text(
-                  "UTC SERVICE",
+                  "ECONOMICS",
                   style: TextStyle(
                       color: mainColor,
                       fontSize: 16,

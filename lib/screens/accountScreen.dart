@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/contract.dart';
+import 'package:mplus_fx/widgets/drawer.dart';
 
 import '../theme/theme.dart';
 import '../widgets/signUpUi.dart';
@@ -17,14 +19,18 @@ class _AccountContactState extends State<AccountContact> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: mainColor,
+      ),
       body: SafeArea(
         child: Stack(
           children: [
             ListView(
               children: [
-                SizedBox(
-                  height: size.height * 0.066,
-                ),
+                // SizedBox(
+                //   height: size.height * 0.066,
+                // ),
                 Expanded(
                   child: Align(
                     alignment: Alignment.center,
@@ -190,8 +196,43 @@ class _AccountContactState extends State<AccountContact> {
                           FlatButton(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30)),
-                              color: amberC,
+                              color: whiteC,
                               onPressed: () {},
+                              child: SizedBox(
+                                height: 50,
+                                width: 315,
+                                child: Center(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "CHANGE PIN",
+                                        style: TextStyle(
+                                            color: mainColor,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                      // Icon(
+                                      //   Icons.keyboard_double_arrow_right,
+                                      //   color: mainColor,
+                                      // )
+                                    ],
+                                  ),
+                                ),
+                              )),
+                          SizedBox(
+                            height: size.height * 0.03,
+                          ),
+                          FlatButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30)),
+                              color: amberC,
+                              onPressed: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return ContractUs();
+                                }));
+                              },
                               child: SizedBox(
                                 height: 50,
                                 width: 315,
@@ -202,53 +243,18 @@ class _AccountContactState extends State<AccountContact> {
                                       Text(
                                         "CONTACT US",
                                         style: TextStyle(
-                                            color: Colors.white,
+                                            color: mainColor,
                                             fontSize: 16,
                                             fontWeight: FontWeight.w600),
                                       ),
                                       Icon(
                                         Icons.keyboard_double_arrow_right,
-                                        color: Colors.white,
+                                        color: mainColor,
                                       )
                                     ],
                                   ),
                                 ),
                               )),
-                          SizedBox(
-                            height: size.height * 0.03,
-                          ),
-                          OutlineButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            borderSide: BorderSide(color: Colors.white),
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return SignUp();
-                              }));
-                            },
-                            child: SizedBox(
-                              height: 50,
-                              width: 315,
-                              child: Center(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "LOG OUT",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w600),
-                                    ),
-                                    Icon(
-                                      Icons.keyboard_double_arrow_right,
-                                      color: Colors.white,
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
                         ],
                       ),
                     ),
@@ -259,6 +265,7 @@ class _AccountContactState extends State<AccountContact> {
           ],
         ),
       ),
+      drawer: MenuDraw(),
       backgroundColor: mainColor,
     );
   }

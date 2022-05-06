@@ -12,7 +12,6 @@ class ServiceGroup1 extends StatefulWidget {
 }
 
 class _ServiceGroupState extends State<ServiceGroup1> {
-  Color boxColor = Color.fromARGB(245, 235, 235, 229);
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
