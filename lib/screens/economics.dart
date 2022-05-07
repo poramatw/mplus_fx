@@ -2,10 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/accountDetails.dart';
+import 'package:mplus_fx/screens/utcEcosystem.dart';
 import 'package:mplus_fx/widgets/viewPage.dart';
 
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
+import 'mib.dart';
 
 class Economics extends StatefulWidget {
   const Economics({Key? key}) : super(key: key);
@@ -215,24 +217,34 @@ class _EconomicsState extends State<Economics> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(
-                                        left: 24, right: 18),
+                                        left: 5, right: 5),
                                     child: Column(
                                       children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
+                                        FlatButton(
+                                          onPressed: () {
+                                            Navigator.push(context,
+                                                MaterialPageRoute(
+                                                    builder: (context) {
+                                              return MIB();
+                                            }));
+                                          },
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                            ),
+                                            height: 34,
+                                            width: 107,
+                                            child: FittedBox(
+                                                fit: BoxFit.fill,
+                                                child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30),
+                                                    child: Image(
+                                                        image: AssetImage(
+                                                            'assets/images/miblogo.png')))),
                                           ),
-                                          height: 34,
-                                          width: 107,
-                                          child: FittedBox(
-                                              fit: BoxFit.fill,
-                                              child: ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadius.circular(30),
-                                                  child: Image(
-                                                      image: AssetImage(
-                                                          'assets/images/miblogo.png')))),
                                         ),
                                         SizedBox(
                                           height: 37,
@@ -247,7 +259,13 @@ class _EconomicsState extends State<Economics> {
                                   Column(
                                     children: [
                                       FlatButton(
-                                        onPressed: (() {}),
+                                        onPressed: (() {
+                                          Navigator.push(context,
+                                              MaterialPageRoute(
+                                                  builder: (context) {
+                                            return UtcEcosystem();
+                                          }));
+                                        }),
                                         child: Container(
                                           decoration: BoxDecoration(
                                             borderRadius:

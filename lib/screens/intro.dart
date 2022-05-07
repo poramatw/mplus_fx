@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/mib.dart';
+import 'package:mplus_fx/screens/utcEcosystem.dart';
 import 'package:mplus_fx/widgets/viewPage.dart';
 
 import 'accountDetails.dart';
@@ -162,25 +164,34 @@ class _IntroState extends State<Intro> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 24, right: 18),
+                                            left: 5, right: 5),
                                         child: Column(
                                           children: [
-                                            Container(
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
+                                            FlatButton(
+                                              onPressed: () {
+                                                Navigator.push(context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) {
+                                                  return MIB();
+                                                }));
+                                              },
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                ),
+                                                height: 34,
+                                                width: 107,
+                                                child: FittedBox(
+                                                    fit: BoxFit.fill,
+                                                    child: ClipRRect(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(30),
+                                                        child: Image(
+                                                            image: AssetImage(
+                                                                'assets/images/miblogo.png')))),
                                               ),
-                                              height: 34,
-                                              width: 107,
-                                              child: FittedBox(
-                                                  fit: BoxFit.fill,
-                                                  child: ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              30),
-                                                      child: Image(
-                                                          image: AssetImage(
-                                                              'assets/images/miblogo.png')))),
                                             ),
                                             SizedBox(
                                               height: 37,
@@ -195,7 +206,13 @@ class _IntroState extends State<Intro> {
                                       Column(
                                         children: [
                                           FlatButton(
-                                            onPressed: (() {}),
+                                            onPressed: (() {
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) {
+                                                return UtcEcosystem();
+                                              }));
+                                            }),
                                             child: Container(
                                               decoration: BoxDecoration(
                                                 borderRadius:

@@ -12,6 +12,7 @@ import 'package:mplus_fx/screens/utcEcosystem.dart';
 import 'package:mplus_fx/widgets/signUpUi.dart';
 
 import 'screens/calendar.dart';
+import 'screens/mib.dart';
 import 'widgets/viewPage.dart';
 //import 'package:responsive_framework/responsive_framework.dart';
 
