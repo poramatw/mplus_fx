@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/accountDetails.dart';
 
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
@@ -51,15 +52,15 @@ class _EconomicsState extends State<Economics> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: mainColor),
-                          height: 77,
-                          width: 77,
+                          height: 66,
+                          width: 66,
                           child: FittedBox(
                               fit: BoxFit.fill,
                               child: ClipRRect(
                                   borderRadius: BorderRadius.circular(30),
                                   child: Image(
                                       image: AssetImage(
-                                          'assets/images/logo.png')))),
+                                          'assets/images/economics.png')))),
                         ),
                       ),
                     ],
@@ -84,14 +85,18 @@ class _EconomicsState extends State<Economics> {
                             child: Column(children: [
                               Padding(
                                 padding:
-                                    const EdgeInsets.only(top: 38, bottom: 20),
+                                    const EdgeInsets.only(top: 30, bottom: 2),
                                 child: SizedBox(
-                                    height: 35,
-                                    width: 106,
-                                    child: Icon(
-                                      Icons.calendar_month,
-                                      size: 50,
-                                    )),
+                                    height: 64,
+                                    width: 64,
+                                    child: FittedBox(
+                                        fit: BoxFit.fill,
+                                        child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            child: Image(
+                                                image: AssetImage(
+                                                    'assets/images/data-analytics.png'))))),
                               ),
                               Text(
                                 "CALENDAR",
@@ -117,18 +122,21 @@ class _EconomicsState extends State<Economics> {
                             // ignore: prefer_const_literals_to_create_immutables
                             child: Column(children: [
                               Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 32, bottom: 15),
+                                padding: const EdgeInsets.only(top: 32),
                                 child: SizedBox(
-                                    height: 50,
-                                    width: 50,
-                                    child: Icon(
-                                      Icons.show_chart,
-                                      size: 50,
-                                    )),
+                                    height: 64,
+                                    width: 64,
+                                    child: FittedBox(
+                                        fit: BoxFit.fill,
+                                        child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            child: Image(
+                                                image: AssetImage(
+                                                    'assets/images/markets.png'))))),
                               ),
                               Text(
-                                "??????",
+                                "MARKETS",
                                 style: TextStyle(
                                     color: mainColor,
                                     fontSize: 16,
@@ -168,7 +176,13 @@ class _EconomicsState extends State<Economics> {
                                   Column(
                                     children: [
                                       FlatButton(
-                                        onPressed: (() {}),
+                                        onPressed: (() {
+                                          Navigator.push(context,
+                                              MaterialPageRoute(
+                                                  builder: (context) {
+                                            return AccountDetails();
+                                          }));
+                                        }),
                                         child: Container(
                                           decoration: BoxDecoration(
                                               borderRadius:

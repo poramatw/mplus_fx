@@ -13,24 +13,24 @@ class CardViewdetails extends StatefulWidget {
 }
 
 class _CallDataState extends State<CardViewdetails> {
-  List gettData = [];
+  // List gettData = [];
 
-  getData() async {
-    var url = Uri.parse("http://192.168.0.105/mplus_FX/viewDetail.php");
-    var response = await http.get(url);
-    if (response.statusCode == 200) {
-      setState(() {
-        gettData = jsonDecode(response.body);
-      });
-      return gettData;
-    }
-  }
+  // getData() async {
+  //   var url = Uri.parse("http://192.168.0.105/mplus_FX/viewDetail.php");
+  //   var response = await http.get(url);
+  //   if (response.statusCode == 200) {
+  //     setState(() {
+  //       gettData = jsonDecode(response.body);
+  //     });
+  //     return gettData;
+  //   }
+  // }
 
-  @override
-  void initState() {
-    super.initState();
-    getData();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   getData();
+  // }
 
   @override
   Widget build(BuildContext context) {

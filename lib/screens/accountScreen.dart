@@ -5,7 +5,8 @@ import 'package:mplus_fx/screens/contract.dart';
 import 'package:mplus_fx/widgets/drawer.dart';
 
 import '../theme/theme.dart';
-import '../widgets/signUpUi.dart';
+
+import 'enterCode.dart';
 
 class AccountContact extends StatefulWidget {
   const AccountContact({Key? key}) : super(key: key);
@@ -197,7 +198,12 @@ class _AccountContactState extends State<AccountContact> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30)),
                               color: whiteC,
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return EnterPin();
+                                }));
+                              },
                               child: SizedBox(
                                 height: 50,
                                 width: 315,

@@ -73,14 +73,55 @@ class ContractUs extends StatelessWidget {
                                 height: size.height * 0.04,
                                 width: size.width,
                               ),
-                              Text(
-                                "Choose your Investment",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w600, fontSize: 16),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: mainColor),
+                                height: 44,
+                                width: 44,
+                                child: FittedBox(
+                                    fit: BoxFit.fill,
+                                    child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(30),
+                                        child: Image(
+                                            image: AssetImage(
+                                                'assets/images/logo.png')))),
                               ),
                               SizedBox(
                                 height: size.height * 0.032,
                               ),
+                              SizedBox(
+                                child: Column(
+                                  // ignore: prefer_const_literals_to_create_immutables
+                                  children: [
+                                    Text(
+                                      "\"MplusFX LOW SPREAD",
+                                      style: TextStyle(
+                                          fontSize: 16, color: Colors.white),
+                                    ),
+                                    Text(
+                                      "สามารถส่งคำสั่งได้ตลอด ราคาส่งตรงจาก LP\"",
+                                      style: TextStyle(
+                                          fontSize: 16, color: Colors.white),
+                                    ),
+                                    Text(
+                                      "ทดลองเทรดฟรี ฝากเงินเพื่อรับโบนัส 30%",
+                                      style: TextStyle(
+                                          fontSize: 16, color: Colors.white),
+                                    ),
+                                    Text(
+                                      "สูงสุดถึง \$1000 และโปรโมชั่นอีกมากมายเพียง",
+                                      style: TextStyle(
+                                          fontSize: 16, color: Colors.white),
+                                    ),
+                                    Text(
+                                      "เทรดกับเรา",
+                                      style: TextStyle(
+                                          fontSize: 16, color: Colors.white),
+                                    ),
+                                  ],
+                                ),
+                              )
                             ],
                           )),
                     ),

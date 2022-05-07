@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/widgets/drawer.dart';
 
-class Deposit extends StatefulWidget {
-  const Deposit({Key? key}) : super(key: key);
+class Withdraw extends StatefulWidget {
+  const Withdraw({Key? key}) : super(key: key);
 
   @override
-  State<Deposit> createState() => _DepositState();
+  State<Withdraw> createState() => _WithdrawState();
 }
 
-class _DepositState extends State<Deposit> {
+class _WithdrawState extends State<Withdraw> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _DepositState extends State<Deposit> {
         ),
         title: Padding(
           padding: const EdgeInsets.only(left: 100),
-          child: Text("Deposit"),
+          child: Text("Withdraw"),
         ),
         actions: [
           Builder(

@@ -1,6 +1,8 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/deposit.dart';
+import 'package:mplus_fx/screens/withdraw.dart';
 
 import '../theme/theme.dart';
 
@@ -26,7 +28,11 @@ class _ServiceGroupState extends State<ServiceGroup1> {
               color: boxColor,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Deposit();
+                }));
+              },
               // ignore: prefer_const_literals_to_create_immutables
               child: Column(children: [
                 Padding(
@@ -57,18 +63,20 @@ class _ServiceGroupState extends State<ServiceGroup1> {
               color: boxColor,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Withdraw();
+                }));
+              },
               // ignore: prefer_const_literals_to_create_immutables
               child: Column(children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 32, bottom: 15),
+                  padding: const EdgeInsets.only(top: 20, bottom: 11),
                   child: SizedBox(
-                      height: 50,
-                      width: 50,
-                      child: Icon(
-                        Icons.account_balance_outlined,
-                        size: 50,
-                      )),
+                      height: 64,
+                      width: 64,
+                      child:
+                          Image(image: AssetImage('assets/images/bank.png'))),
                 ),
                 Text(
                   "ถอนเงิน",

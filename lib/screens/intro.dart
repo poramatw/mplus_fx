@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/widgets/viewPage.dart';
 
 import 'accountDetails.dart';
 
@@ -64,12 +65,12 @@ class _IntroState extends State<Intro> {
                           // ignore: prefer_const_literals_to_create_immutables
                           children: [
                             Text(
-                              "MplusFX LOW SPREAD",
+                              "\"MplusFX LOW SPREAD",
                               style:
                                   TextStyle(fontSize: 16, color: Colors.white),
                             ),
                             Text(
-                              "สามารถส่งคำสั่งได้ตลอด ราคาส่งตรงจาก LP",
+                              "สามารถส่งคำสั่งได้ตลอด ราคาส่งตรงจาก LP\"",
                               style:
                                   TextStyle(fontSize: 16, color: Colors.white),
                             ),
@@ -79,7 +80,7 @@ class _IntroState extends State<Intro> {
                                   TextStyle(fontSize: 16, color: Colors.white),
                             ),
                             Text(
-                              "สูงสุดถึง  และโปรโมชั่นอีกมากมายเพียง",
+                              "สูงสุดถึง \$1000 และโปรโมชั่นอีกมากมายเพียง",
                               style:
                                   TextStyle(fontSize: 16, color: Colors.white),
                             ),
@@ -126,7 +127,7 @@ class _IntroState extends State<Intro> {
                                               Navigator.push(context,
                                                   MaterialPageRoute(
                                                       builder: (context) {
-                                                return AccountDetails();
+                                                return ViewPage();
                                               }));
                                             }),
                                             child: Container(

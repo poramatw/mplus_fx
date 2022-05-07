@@ -1,7 +1,12 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/accountDetails.dart';
+import 'package:mplus_fx/screens/economics.dart';
+import 'package:mplus_fx/screens/orderScreen.dart';
+import 'package:mplus_fx/screens/signIn.dart';
 
+import '../screens/enterCode.dart';
 import '../theme/theme.dart';
 
 class MenuDraw extends StatelessWidget {
@@ -63,10 +68,14 @@ class MenuDraw extends StatelessWidget {
         )),
         ListTile(
           title: Text('MPLUSFX', style: TextStyle(color: whiteC)),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return AccountDetails();
+            }));
+          },
         ),
         ListTile(
-            title: Text('YOUR PROFIT', style: TextStyle(color: whiteC)),
+            title: Text('YOUR PORT', style: TextStyle(color: whiteC)),
             onTap: () {}),
         ListTile(
             title: Text('DEPOSIT', style: TextStyle(color: whiteC)),
@@ -79,33 +88,46 @@ class MenuDraw extends StatelessWidget {
             onTap: () {}),
         ListTile(
             title: Text('TRADE', style: TextStyle(color: whiteC)),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return OrderSc();
+              }));
+            }),
+        ListTile(
+            title: Text('MIB.SOCIAL', style: TextStyle(color: whiteC)),
             onTap: () {}),
         ListTile(
-            title: Text('?????', style: TextStyle(color: whiteC)),
+            title: Text('UTC.MONEY', style: TextStyle(color: whiteC)),
             onTap: () {}),
         ListTile(
-            title: Text('UTC ????', style: TextStyle(color: whiteC)),
+            title: Text('UTC TOKEN', style: TextStyle(color: whiteC)),
             onTap: () {}),
         ListTile(
-            title: Text('UTC ????', style: TextStyle(color: whiteC)),
+            title: Text('U TRAVEL', style: TextStyle(color: whiteC)),
             onTap: () {}),
         ListTile(
-            title: Text('UTC ????', style: TextStyle(color: whiteC)),
+            title: Text('UTC MARKET', style: TextStyle(color: whiteC)),
             onTap: () {}),
         ListTile(
-            title: Text('UTC ????', style: TextStyle(color: whiteC)),
-            onTap: () {}),
-        ListTile(
-            title: Text('???????', style: TextStyle(color: whiteC)),
-            onTap: () {}),
+            title: Text('ECONOMICS', style: TextStyle(color: whiteC)),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Economics();
+              }));
+            }),
         ListTile(
             title: Text('CALENDAR', style: TextStyle(color: whiteC)),
             onTap: () {}),
         ListTile(
-            title: Text('????', style: TextStyle(color: whiteC)), onTap: () {}),
+            title: Text('MARKETS', style: TextStyle(color: whiteC)),
+            onTap: () {}),
         ListTile(
             title: Text('CHANGE PIN', style: TextStyle(color: whiteC)),
-            onTap: () {}),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return EnterPin();
+              }));
+            }),
         Padding(
           padding: const EdgeInsets.only(left: 40, right: 40, bottom: 10),
           child: SizedBox(
@@ -115,7 +137,11 @@ class MenuDraw extends StatelessWidget {
               color: whiteC,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return SignIn();
+                }));
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 // ignore: prefer_const_literals_to_create_immutables

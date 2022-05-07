@@ -279,7 +279,7 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                                     )),
                               ),
                               Text(
-                                "?????????",
+                                "CoinMarketcap",
                                 style: TextStyle(
                                     color: mainColor,
                                     fontSize: 16,

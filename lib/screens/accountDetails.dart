@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_unnecessary_containers, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/orderScreen.dart';
 
 import 'package:mplus_fx/widgets/cardViewdetails.dart';
 
@@ -77,12 +78,17 @@ class _AccountDetailsState extends State<AccountDetails> {
                               color: whiteC,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30)),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return OrderSc();
+                                }));
+                              },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "????",
+                                    "TRADE",
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.w600,
