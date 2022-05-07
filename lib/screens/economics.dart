@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/accountDetails.dart';
+import 'package:mplus_fx/widgets/viewPage.dart';
 
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
@@ -180,7 +181,7 @@ class _EconomicsState extends State<Economics> {
                                           Navigator.push(context,
                                               MaterialPageRoute(
                                                   builder: (context) {
-                                            return AccountDetails();
+                                            return ViewPage();
                                           }));
                                         }),
                                         child: Container(

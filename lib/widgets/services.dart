@@ -3,8 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/deposit.dart';
 import 'package:mplus_fx/screens/withdraw.dart';
+import 'package:mplus_fx/widgets/viewWith.dart';
 
 import '../theme/theme.dart';
+import 'viewDep.dart';
 
 class ServiceGroup1 extends StatefulWidget {
   const ServiceGroup1({Key? key}) : super(key: key);
@@ -30,7 +32,7 @@ class _ServiceGroupState extends State<ServiceGroup1> {
                   borderRadius: BorderRadius.circular(30)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Deposit();
+                  return ViewDeposit();
                 }));
               },
               // ignore: prefer_const_literals_to_create_immutables
@@ -65,7 +67,7 @@ class _ServiceGroupState extends State<ServiceGroup1> {
                   borderRadius: BorderRadius.circular(30)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Withdraw();
+                  return ViewWithdraw();
                 }));
               },
               // ignore: prefer_const_literals_to_create_immutables

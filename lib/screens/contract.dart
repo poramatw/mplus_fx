@@ -56,7 +56,75 @@ class ContractUs extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: size.height * 0.04,
+                    height: size.height * 0.13,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 80, bottom: 20),
+                    child: Row(
+                      children: [
+                        Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(33)),
+                            height: 55,
+                            width: 55,
+                            child: FittedBox(
+                                child: Image(
+                                    image: AssetImage(
+                                        'assets/images/email.png')))),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 30),
+                          child: Text("support@mplusfx.com",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500, fontSize: 16)),
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 80, bottom: 20),
+                    child: Row(
+                      children: [
+                        Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(33)),
+                            height: 55,
+                            width: 55,
+                            child: FittedBox(
+                                child: Image(
+                                    image: AssetImage(
+                                        'assets/images/facebook.png')))),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 30),
+                          child: Text("Mplus Thailand",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500, fontSize: 16)),
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 80),
+                    child: Row(
+                      children: [
+                        Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(33)),
+                            height: 55,
+                            width: 55,
+                            child: FittedBox(
+                                child: Image(
+                                    image:
+                                        AssetImage('assets/images/line.png')))),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 30),
+                          child: Text(
+                            "@mplusfx",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500, fontSize: 16),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   Expanded(
                     child: Align(
@@ -88,7 +156,7 @@ class ContractUs extends StatelessWidget {
                                                 'assets/images/logo.png')))),
                               ),
                               SizedBox(
-                                height: size.height * 0.032,
+                                height: size.height * 0.022,
                               ),
                               SizedBox(
                                 child: Column(

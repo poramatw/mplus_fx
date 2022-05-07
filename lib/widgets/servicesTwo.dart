@@ -5,6 +5,7 @@ import 'package:mplus_fx/screens/economics.dart';
 import 'package:mplus_fx/screens/transfer.dart';
 
 import '../theme/theme.dart';
+import 'viewTrans.dart';
 
 class ServiceGroup2 extends StatefulWidget {
   const ServiceGroup2({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class _ServiceGroup2State extends State<ServiceGroup2> {
                   borderRadius: BorderRadius.circular(30)),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Transfer();
+                  return ViewTransfer();
                 }));
               },
               // ignore: prefer_const_literals_to_create_immutables
