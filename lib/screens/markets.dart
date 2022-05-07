@@ -8,14 +8,14 @@ import 'package:mplus_fx/theme/theme.dart';
 import 'package:mplus_fx/widgets/drawer.dart';
 //import 'package:mplus_fx/model/calendarApi.dart';
 
-class CalendarAPI extends StatefulWidget {
-  const CalendarAPI({Key? key}) : super(key: key);
+class MarketAPI extends StatefulWidget {
+  const MarketAPI({Key? key}) : super(key: key);
 
   @override
-  State<CalendarAPI> createState() => _CalendarAPIState();
+  State<MarketAPI> createState() => _MarketAPIState();
 }
 
-class _CalendarAPIState extends State<CalendarAPI> {
+class _MarketAPIState extends State<MarketAPI> {
   // late Future<dynamic> futureCalendar;
   List gettCalendar = [];
 
@@ -71,10 +71,10 @@ class _CalendarAPIState extends State<CalendarAPI> {
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Image(
-                      height: 40,
+                      height: 50,
                       width: 60,
-                      image: AssetImage('assets/images/data-analytics.png')),
-                  Text("CALENDAR")
+                      image: AssetImage('assets/images/markets.png')),
+                  Text("Market")
                 ],
               ),
             ),

@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/accountDetails.dart';
+import 'package:mplus_fx/screens/calendar.dart';
+import 'package:mplus_fx/screens/markets.dart';
 import 'package:mplus_fx/screens/utcEcosystem.dart';
 import 'package:mplus_fx/widgets/viewPage.dart';
 
@@ -83,7 +85,12 @@ class _EconomicsState extends State<Economics> {
                             color: boxColor,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return CalendarAPI();
+                              }));
+                            },
                             // ignore: prefer_const_literals_to_create_immutables
                             child: Column(children: [
                               Padding(
@@ -121,7 +128,12 @@ class _EconomicsState extends State<Economics> {
                             color: boxColor,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return MarketAPI();
+                              }));
+                            },
                             // ignore: prefer_const_literals_to_create_immutables
                             child: Column(children: [
                               Padding(
