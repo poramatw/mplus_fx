@@ -27,7 +27,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: UtcEcosystem(),
+      home: SignIn(),
       theme: ThemeData(fontFamily: 'Kanit'),
     );
   }
