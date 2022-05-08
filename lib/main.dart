@@ -5,6 +5,7 @@ import 'package:mplus_fx/screens/accountScreen.dart';
 import 'package:mplus_fx/screens/confirmPin.dart';
 import 'package:mplus_fx/screens/deposit.dart';
 import 'package:mplus_fx/screens/economics.dart';
+import 'package:mplus_fx/screens/newPin.dart';
 import 'package:mplus_fx/screens/orderScreen.dart';
 import 'package:mplus_fx/screens/signIn.dart';
 import 'package:mplus_fx/screens/utcEcosystem.dart';
@@ -26,7 +27,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SignIn(),
+      home: UtcEcosystem(),
       theme: ThemeData(fontFamily: 'Kanit'),
     );
   }

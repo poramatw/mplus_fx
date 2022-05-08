@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/contract.dart';
+import 'package:mplus_fx/screens/newPin.dart';
 import 'package:mplus_fx/widgets/drawer.dart';
 
 import '../theme/theme.dart';

@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
-
-import 'package:mplus_fx/screens/intro.dart';
+import 'package:mplus_fx/screens/confirmPin.dart';
 
 import 'package:mplus_fx/theme/theme.dart';
 import 'package:mplus_fx/widgets/signUpUi.dart';
@@ -112,7 +111,7 @@ class SignInUi extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return Intro();
+                          return ConfirmPin();
                         }));
                       },
                       child: Row(
