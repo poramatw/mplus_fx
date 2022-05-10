@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/accountDetails.dart';
 import 'package:mplus_fx/screens/accountScreen.dart';
 import 'package:mplus_fx/screens/confirmPin.dart';
 import 'package:mplus_fx/screens/deposit.dart';
