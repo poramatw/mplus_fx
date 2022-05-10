@@ -3,14 +3,14 @@ import 'package:mplus_fx/screens/accountScreen.dart';
 
 import '../theme/theme.dart';
 
-class editDataUser extends StatefulWidget {
-  const editDataUser({Key? key}) : super(key: key);
+class EditDataUser extends StatefulWidget {
+  const EditDataUser({Key? key}) : super(key: key);
 
   @override
-  State<editDataUser> createState() => _editDataUserState();
+  State<EditDataUser> createState() => _EditDataUserState();
 }
 
-class _editDataUserState extends State<editDataUser> {
+class _EditDataUserState extends State<EditDataUser> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -23,60 +23,62 @@ class _editDataUserState extends State<editDataUser> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text("Profile information", style: TextStyle(fontSize: 35)),
-                  SizedBox(
+                  const Text("Profile information",
+                      style: TextStyle(fontSize: 35)),
+                  const SizedBox(
                     height: 5,
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'Fullname'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration: const InputDecoration(hintText: 'Fullname'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'Email'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration: const InputDecoration(hintText: 'Email'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
-                  Text("Date Of Birth",
+                  const Text("Date Of Birth",
                       style: TextStyle(fontSize: 15, color: Colors.grey)),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'dd/mm/ yyyy'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration: const InputDecoration(hintText: 'dd/mm/ yyyy'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
-                  Text("Gender",
+                  const Text("Gender",
                       style: TextStyle(fontSize: 15, color: Colors.grey)),
                   TextFormField(),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'Address'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration: const InputDecoration(hintText: 'Address'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'City'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration: const InputDecoration(hintText: 'City'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'State/Province'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration:
+                        const InputDecoration(hintText: 'State/Province'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'ZIP code'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration: const InputDecoration(hintText: 'ZIP code'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'Your Country'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration: const InputDecoration(hintText: 'Your Country'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'Nationality'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration: const InputDecoration(hintText: 'Nationality'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'Phone #'),
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
+                    decoration: const InputDecoration(hintText: 'Phone #'),
+                    style: const TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   SizedBox(
                     height: size.height * 0.05,
@@ -89,7 +91,7 @@ class _editDataUserState extends State<editDataUser> {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return AccountContact();
+                            return const AccountContact();
                           }));
                         },
                         child: SizedBox(
@@ -99,7 +101,7 @@ class _editDataUserState extends State<editDataUser> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
+                                const Text(
                                   "Save",
                                   style: TextStyle(
                                       color: Colors.white,
