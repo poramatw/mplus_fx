@@ -23,10 +23,11 @@ class _TapbarAccountState extends State<TabbarAccount> {
           IconButton(
               color: Colors.white,
               iconSize: 30,
-              icon: Icon(Icons.navigate_before),
+              icon: Icon(Icons.menu),
               onPressed: () {
-                Navigator.pop(context);
+                Scaffold.of(context).openDrawer();
               }),
+          Spacer(),
           Text("MplusFX",
               style: GoogleFonts.poppins(
                   fontSize: 20,

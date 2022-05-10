@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/widgets/drawer.dart';
 
 import '../widgets/tabBarOrder.dart';
 
@@ -21,7 +22,7 @@ class _OrderScState extends State<OrderSc> {
           physics: ClampingScrollPhysics(),
           children: [
             TabbarOrder(),
-            Container(
+            SizedBox(
               height: size.height * 0.3,
               child: Image(image: AssetImage('assets/images/imgOrder.png')),
             ),
@@ -143,6 +144,7 @@ class _OrderScState extends State<OrderSc> {
           ],
         )
       ]),
+      drawer: MenuDraw(),
       backgroundColor: const Color.fromRGBO(178, 178, 178, 1),
     );
   }

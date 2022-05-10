@@ -1,8 +1,12 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/screens/deposit.dart';
+import 'package:mplus_fx/screens/withdraw.dart';
+import 'package:mplus_fx/widgets/viewWith.dart';
 
 import '../theme/theme.dart';
+import 'viewDep.dart';
 
 class ServiceGroup1 extends StatefulWidget {
   const ServiceGroup1({Key? key}) : super(key: key);
@@ -12,7 +16,6 @@ class ServiceGroup1 extends StatefulWidget {
 }
 
 class _ServiceGroupState extends State<ServiceGroup1> {
-  Color boxColor = Color.fromARGB(245, 235, 235, 229);
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -27,7 +30,11 @@ class _ServiceGroupState extends State<ServiceGroup1> {
               color: boxColor,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ViewDeposit();
+                }));
+              },
               // ignore: prefer_const_literals_to_create_immutables
               child: Column(children: [
                 Padding(
@@ -35,7 +42,8 @@ class _ServiceGroupState extends State<ServiceGroup1> {
                   child: SizedBox(
                       height: 35,
                       width: 106,
-                      child: Icon(Icons.transfer_within_a_station)),
+                      child: Image(
+                          image: AssetImage('assets/images/chillpay.png'))),
                 ),
                 Text(
                   "ฝากเงิน",
@@ -57,18 +65,20 @@ class _ServiceGroupState extends State<ServiceGroup1> {
               color: boxColor,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ViewWithdraw();
+                }));
+              },
               // ignore: prefer_const_literals_to_create_immutables
               child: Column(children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 32, bottom: 15),
+                  padding: const EdgeInsets.only(top: 20, bottom: 11),
                   child: SizedBox(
-                      height: 50,
-                      width: 50,
-                      child: Icon(
-                        Icons.account_balance_outlined,
-                        size: 50,
-                      )),
+                      height: 64,
+                      width: 64,
+                      child:
+                          Image(image: AssetImage('assets/images/bank.png'))),
                 ),
                 Text(
                   "ถอนเงิน",

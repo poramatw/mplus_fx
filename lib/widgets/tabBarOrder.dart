@@ -23,22 +23,18 @@ class _TabbarOrderState extends State<TabbarOrder> {
           IconButton(
               color: mainColor,
               iconSize: 30,
-              icon: Icon(Icons.navigate_before),
+              icon: Icon(
+                Icons.menu,
+                color: Colors.white,
+              ),
               onPressed: () {
-                Navigator.pop(context);
+                Scaffold.of(context).openDrawer();
               }),
+          Spacer(),
           Text("MT4 ORDERS",
               style: GoogleFonts.poppins(
                   fontSize: 20, color: mainColor, fontWeight: FontWeight.w600)),
           Spacer(),
-          IconButton(
-              icon: Icon(
-                Icons.notification_add,
-                color: mainColor,
-              ),
-              onPressed: () {
-                print("notification");
-              })
         ],
       )),
     );
