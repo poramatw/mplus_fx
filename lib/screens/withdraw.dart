@@ -46,7 +46,7 @@ class _WithdrawState extends State<Withdraw> {
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10),
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 25),
                 child: Container(
                   height: 70,
                   width: size.width,
@@ -196,116 +196,127 @@ class _WithdrawState extends State<Withdraw> {
                   height: 150,
                   width: size.width,
                   decoration: BoxDecoration(color: whiteC),
-                  child: Column(
+                  child: Row(
                     children: [
                       Expanded(
-                          flex: 1,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 15),
-                                child: Row(
-                                  children: [
-                                    Text("MT4Free Margin"),
-                                  ],
+                        child: Column(
+                          children: [
+                            Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 15),
+                                  child: Row(
+                                    children: [
+                                      Text("MT4Free Margin"),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 15),
-                                child: Row(
-                                  children: [
-                                    Text("Deposit"),
-                                  ],
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 15),
+                                  child: Row(
+                                    children: [
+                                      Text("Deposit"),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 15),
-                                child: Row(
-                                  children: [
-                                    Text("Withdrawal"),
-                                  ],
-                                ),
-                              )
-                            ],
-                          )),
-                      Divider(
-                        color: Colors.grey,
-                      ),
-                      Expanded(
-                          flex: 1,
-                          child: Row(children: [
-                            Expanded(
-                                flex: 1,
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 15),
-                                      child: Row(
-                                        children: [
-                                          Text("Deposit"),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 15),
-                                      child: Row(
-                                        children: [
-                                          Text("\$ 10.00"),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 15),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            height: 5,
-                                            width: 150,
-                                            color: Colors.green,
-                                          ),
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                )),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 15),
+                                  child: Row(
+                                    children: [
+                                      Text("Withdrawal"),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                             Divider(
                               color: Colors.grey,
                             ),
                             Expanded(
                                 flex: 1,
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 15),
-                                      child: Row(
+                                child: Row(children: [
+                                  Expanded(
+                                      flex: 1,
+                                      child: Column(
                                         children: [
-                                          Text("Withdrawal"),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 15),
-                                      child: Row(
-                                        children: [
-                                          Text("\$ 10.00"),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 15),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            height: 5,
-                                            width: 150,
-                                            color: Colors.grey.withOpacity(0.5),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 15),
+                                            child: Row(
+                                              children: [
+                                                Text("Deposit"),
+                                              ],
+                                            ),
                                           ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 15),
+                                            child: Row(
+                                              children: [
+                                                Text("\$ 10.00"),
+                                              ],
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 15),
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  height: 5,
+                                                  width: 150,
+                                                  color: Colors.green,
+                                                ),
+                                              ],
+                                            ),
+                                          )
                                         ],
-                                      ),
-                                    )
-                                  ],
-                                )),
-                          ]))
+                                      )),
+                                  Divider(
+                                    color: Colors.grey,
+                                  ),
+                                  Expanded(
+                                      flex: 1,
+                                      child: Column(
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 15),
+                                            child: Row(
+                                              children: [
+                                                Text("Withdrawal"),
+                                              ],
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 15),
+                                            child: Row(
+                                              children: [
+                                                Text("\$ 10.00"),
+                                              ],
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 15),
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  height: 5,
+                                                  width: 150,
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      )),
+                                ]))
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),

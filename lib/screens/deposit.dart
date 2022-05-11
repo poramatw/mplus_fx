@@ -14,6 +14,7 @@ class _DepositState extends State<Deposit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       drawer: MenuDraw(),
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -38,7 +39,22 @@ class _DepositState extends State<Deposit> {
           )
         ],
       ),
-      body: ListView(),
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10, left: 10, top: 25),
+            child: Container(
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(20)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [Text('MplusFx'), Text('TRADER')],
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
