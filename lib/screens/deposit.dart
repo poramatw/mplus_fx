@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/theme/theme.dart';
 import 'package:mplus_fx/widgets/drawer.dart';
 
 import '../theme/theme.dart';
@@ -47,7 +48,9 @@ class _DepositState extends State<Deposit> {
           Column(
             children: [
               Padding(
+
                 padding: const EdgeInsets.only(left: 10, right: 10, top: 25),
+
                 child: Container(
                   height: 70,
                   width: size.width,
@@ -57,8 +60,12 @@ class _DepositState extends State<Deposit> {
                     children: [
                       Expanded(
                           flex: 1,
-                          child: CircleAvatar(
-                            child: Icon(Icons.person),
+
+                          child: Image(
+                            image: AssetImage('assets/images/user_128px.png'),
+                            height: 50,
+                            width: 50,
+
                           )),
                       Expanded(
                           flex: 3,
@@ -68,14 +75,26 @@ class _DepositState extends State<Deposit> {
                                 padding: const EdgeInsets.only(top: 10),
                                 child: Row(
                                   children: [
-                                    Text("MplusFX"),
-                                    Icon(Icons.manage_accounts)
+
+                                    Text("MplusFX "),
+                                    Image(
+                                      image:
+                                          AssetImage('assets/images/edit.png'),
+                                      height: 20,
+                                      width: 20,
+                                    ),
+
                                   ],
                                 ),
                               ),
                               Row(
                                 children: [
-                                  Text("TRADER"),
+
+                                  Text(
+                                    "TRADER",
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+
                                 ],
                               )
                             ],
@@ -140,7 +159,10 @@ class _DepositState extends State<Deposit> {
                                           Container(
                                             height: 5,
                                             width: 150,
-                                            color: Colors.green,
+
+                                            color: Colors.green[300],
+
+
                                           ),
                                         ],
                                       ),
@@ -199,7 +221,9 @@ class _DepositState extends State<Deposit> {
                   child: Row(
                     children: [
                       Expanded(
+
                         flex: 3,
+
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -231,6 +255,7 @@ class _DepositState extends State<Deposit> {
                         ),
                       ),
                       Expanded(
+
                         flex: 1,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -259,6 +284,7 @@ class _DepositState extends State<Deposit> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text("\$ 0.00"),
+
                                 ],
                               ),
                             ),
@@ -279,7 +305,9 @@ class _DepositState extends State<Deposit> {
                   child: Row(
                     children: [
                       Expanded(
+
                         flex: 3,
+
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -303,25 +331,31 @@ class _DepositState extends State<Deposit> {
                         ),
                       ),
                       Expanded(
+
                         flex: 1,
+
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Padding(
+
                               padding: const EdgeInsets.only(right: 15),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text("\$ 10.00"),
+
                                 ],
                               ),
                             ),
                             Padding(
+
                               padding: const EdgeInsets.only(right: 15),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text("\$ 0.00"),
+
                                 ],
                               ),
                             ),
@@ -334,11 +368,13 @@ class _DepositState extends State<Deposit> {
               ),
               ///////////////////////////////////////////////////////////////////////////////////
               Padding(
+
                 padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
                 child: Container(
                   height: 75,
                   width: size.width,
                   decoration: BoxDecoration(color: amberC.withOpacity(0.4)),
+
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -346,7 +382,9 @@ class _DepositState extends State<Deposit> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
+
                             Text("Minimum Deposit Per time: \$10"),
+
                           ],
                         ),
                       ),
@@ -354,7 +392,9 @@ class _DepositState extends State<Deposit> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
+
                             Text("Maximum Deposit Per time: \$100000"),
+
                           ],
                         ),
                       ),
@@ -362,6 +402,7 @@ class _DepositState extends State<Deposit> {
                   ),
                 ),
               ),
+
               ///////////////////////////////////////////////////////////////////////////////////
               Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
@@ -369,6 +410,7 @@ class _DepositState extends State<Deposit> {
                   height: 75,
                   width: size.width,
                   decoration: BoxDecoration(color: amberC.withOpacity(0.4)),
+
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -376,7 +418,9 @@ class _DepositState extends State<Deposit> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
+
                             Text("Minimum Withdrawal Per time: \$10"),
+
                           ],
                         ),
                       ),
@@ -384,14 +428,76 @@ class _DepositState extends State<Deposit> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
+
                             Text("Maximum Withdrawal Per time: \$1500"),
+
                           ],
                         ),
                       ),
                     ],
                   ),
                 ),
-              )
+
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10, top: 10),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10)),
+                            color: whiteC),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image(
+                              color: Colors.black,
+                              image: AssetImage('assets/images/charity.png'),
+                              height: 50,
+                              width: 50,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  "E-Currency",
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image(
+                            color: Colors.grey,
+                            image: AssetImage('assets/images/charity.png'),
+                            height: 50,
+                            width: 50,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "Cryptocurrency",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
             ],
           )
         ],
