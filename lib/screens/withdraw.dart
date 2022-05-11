@@ -189,11 +189,81 @@ class _WithdrawState extends State<Withdraw> {
                 ),
               ),
               ///////////////////////////////////////////////////////////////////////////////////
-
               Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10),
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
                 child: Container(
-                  height: 150,
+                  height: 80,
+                  width: size.width,
+                  decoration: BoxDecoration(color: whiteC),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 3,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 15),
+                              child: Row(
+                                children: [
+                                  Text("MT4Free Margin"),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 15),
+                              child: Row(
+                                children: [
+                                  Text("Deposit"),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 15),
+                              child: Row(
+                                children: [
+                                  Text("Withdrawal"),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text("\$ 10.00"),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text("\$ 0.00"),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text("\$ 0.00"),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              ///////////////////////////////////////////////////////////////////////////////////
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 2),
+                child: Container(
+                  height: 65,
                   width: size.width,
                   decoration: BoxDecoration(color: whiteC),
                   child: Row(
@@ -314,6 +384,53 @@ class _WithdrawState extends State<Withdraw> {
                                         ],
                                       )),
                                 ]))
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: [
+                            Text("Total Commission"),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: [
+                            Text("Available Commission"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              ///////////////////////////////////////////////////////////////////////////////////
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+                child: Container(
+                  height: 65,
+                  width: size.width,
+                  decoration: BoxDecoration(color: whiteC),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: [
+                            Text("Total Commission"),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: [
+                            Text("Available Commission"),
+
                           ],
                         ),
                       ),
@@ -325,6 +442,6 @@ class _WithdrawState extends State<Withdraw> {
           )
         ],
       ),
-    );
+    ]));
   }
 }
