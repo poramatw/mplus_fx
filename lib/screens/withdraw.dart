@@ -46,7 +46,7 @@ class _WithdrawState extends State<Withdraw> {
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10),
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 25),
                 child: Container(
                   height: 70,
                   width: size.width,
@@ -85,7 +85,7 @@ class _WithdrawState extends State<Withdraw> {
               ),
               ///////////////////////////////////////////////////////////////////////////////////
               Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10),
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
                 child: Container(
                   height: 150,
                   width: size.width,
@@ -237,20 +237,29 @@ class _WithdrawState extends State<Withdraw> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text("\$ 10.00"),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 15),
+                                  child: Text("\$ 10.00"),
+                                ),
                               ],
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text("\$ 0.00"),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 15),
+                                  child: Text("\$ 0.00"),
+                                ),
                               ],
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Text("\$ 0.00"),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.only(right: 15),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Text("\$ 0.00"),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -266,22 +275,55 @@ class _WithdrawState extends State<Withdraw> {
                   height: 65,
                   width: size.width,
                   decoration: BoxDecoration(color: whiteC),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 15),
-                        child: Row(
+                      Expanded(
+                        flex: 3,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text("Total Commission"),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 15),
+                              child: Row(
+                                children: [
+                                  Text("Total Commission"),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 15),
+                              child: Row(
+                                children: [
+                                  Text("Available Commission"),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 15),
-                        child: Row(
+                      Expanded(
+                        flex: 1,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text("Available Commission"),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 15),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Text("\$ 10.00"),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 15),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Text("\$ 0.00"),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -293,9 +335,9 @@ class _WithdrawState extends State<Withdraw> {
               Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
                 child: Container(
-                  height: 65,
+                  height: 75,
                   width: size.width,
-                  decoration: BoxDecoration(color: whiteC),
+                  decoration: BoxDecoration(color: amberC.withOpacity(0.4)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -303,7 +345,7 @@ class _WithdrawState extends State<Withdraw> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
-                            Text("Total Commission"),
+                            Text("Minimum Deposit Per time: \$10"),
                           ],
                         ),
                       ),
@@ -311,7 +353,37 @@ class _WithdrawState extends State<Withdraw> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
-                            Text("Available Commission"),
+                            Text("Maximum Deposit Per time: \$100000"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              ///////////////////////////////////////////////////////////////////////////////////
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
+                child: Container(
+                  height: 75,
+                  width: size.width,
+                  decoration: BoxDecoration(color: amberC.withOpacity(0.4)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: [
+                            Text("Minimum Withdrawal Per time: \$10"),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: [
+                            Text("Maximum Withdrawal Per time: \$100000"),
                           ],
                         ),
                       ),
