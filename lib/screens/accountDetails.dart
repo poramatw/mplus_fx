@@ -32,13 +32,23 @@ class _AccountDetailsState extends State<AccountDetails> {
         elevation: 0.0,
         title: Center(child: Text('MplusFX')),
         actions: [
-          IconButton(
-              onPressed: (() {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return AccountContact();
-                }));
-              }),
-              icon: Icon(Icons.person))
+          Padding(
+            padding: EdgeInsets.only(right: 10),
+            child: CircleAvatar(
+              radius: 20,
+              child: CircleAvatar(
+                backgroundColor: mainColor.withOpacity(0.2),
+                child: IconButton(
+                    onPressed: (() {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return AccountContact();
+                      }));
+                    }),
+                    icon: Icon(Icons.person)),
+              ),
+            ),
+          )
         ],
       ),
       body: Stack(children: [
@@ -101,8 +111,18 @@ class _AccountDetailsState extends State<AccountDetails> {
                         )
                       ],
                     )),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30),
+                  child: Text(
+                    "Wallet : 123456 THB",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
                 SizedBox(
-                  height: size.height * 0.062,
+                  height: size.height * 0.052,
                 ),
                 CardViewdetails(),
                 /////////////////////////////////////////////////////////////////////////////////////////////

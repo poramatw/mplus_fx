@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:mplus_fx/main.dart';
 import 'package:mplus_fx/widgets/drawer.dart';
 
 import '../theme/theme.dart';
@@ -17,115 +18,74 @@ class _ViewDetialsState extends State<ViewDetials> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'MT4 Standard Account',
-            style: TextStyle(color: mainColor),
-          ),
-          elevation: 0.0,
-          backgroundColor: amberC,
-        ),
-        drawer: MenuDraw(),
-        body: Stack(
-          children: [
-            Container(
+      drawer: MenuDraw(),
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: amberC,
+        title: Text('MT4 Standard Account'),
+      ),
+      body: Column(
+        children: [
+          Container(
+              height: size.height * 0.2,
+              width: size.width,
               decoration: BoxDecoration(
                   color: amberC,
                   borderRadius:
                       BorderRadius.vertical(bottom: Radius.circular(30))),
-              height: size.height * 0.2,
-            ),
-            SizedBox(
-              child: Stack(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Column(
-                    children: [
-                      // Container(
-                      //   margin: EdgeInsets.only(left: 16, right: 30, top: 33),
-                      //   child: Row(children: [
-                      //     IconButton(
-                      //         iconSize: 30,
-                      //         icon: Icon(Icons.navigate_before),
-                      //         onPressed: () {
-                      //           Navigator.pop(context);
-                      //         }),
-                      //     Text(
-                      //       "MT4 Standard Account",
-                      //       style: TextStyle(
-                      //           fontSize: 20, fontWeight: FontWeight.w500),
-                      //     ),
-                      //     Spacer(),
-                      //     IconButton(
-                      //         icon: Icon(
-                      //           Icons.notification_add,
-                      //           color: Color.fromRGBO(27, 29, 111, 1),
-                      //         ),
-                      //         onPressed: () {
-                      //           print("notification");
-                      //         })
-                      //   ]),
-                      // ),
-                      Row(
+                  SizedBox(
+                      height: 77,
+                      width: 77,
+                      child:
+                          Image(image: AssetImage('assets/images/logo.png'))),
+                ],
+              )),
+          Container(
+            height: size.height * 0.45,
+            width: size.width,
+            child: Column(
+              children: [
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 45),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: mainColor),
-                              height: 77,
-                              width: 77,
-                              child: FittedBox(
-                                  fit: BoxFit.fill,
-                                  child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(30),
-                                      child: Image(
-                                          image: AssetImage(
-                                              'assets/images/logo.png')))),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
                             ),
+                            height: 48,
+                            width: 49,
+                            child: FittedBox(
+                                fit: BoxFit.fill,
+                                child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(30),
+                                    child: Image(
+                                        color: Colors.black,
+                                        image: AssetImage(
+                                            'assets/images/logoMplus.png')))),
+                          ),
+                          Text(
+                            "รายละเอียดบัญชี",
+                            style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: size.height * 0.079,
-                      ),
-                      Container(
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  height: 48,
-                                  width: 49,
-                                  child: FittedBox(
-                                      fit: BoxFit.fill,
-                                      child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(30),
-                                          child: Image(
-                                              color: Colors.black,
-                                              image: AssetImage(
-                                                  'assets/images/logoMplus.png')))),
-                                ),
-                                Text(
-                                  "รายละเอียดบัญชี",
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 85, top: 17, right: 80),
+                    )),
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                      child: Row(
+                        children: [
+                          Expanded(flex: 1, child: Container()),
+                          Expanded(
+                              flex: 3,
                               child: Container(
-                                width: 240,
-                                height: 240,
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
@@ -133,114 +93,117 @@ class _ViewDetialsState extends State<ViewDetials> {
                                     Row(
                                       children: [
                                         Text("ประเภทบัญชี"),
-                                        Spacer(),
-                                        Text("STANDARD")
                                       ],
                                     ),
                                     Row(
                                       children: [
                                         Text("หมายเลขบัญชี"),
-                                        Spacer(),
-                                        Text("MT4-12345679")
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text("มาร์จิ้น"),
-                                        Spacer(),
-                                        Text("500.00")
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text("เครดิต"),
-                                        Spacer(),
-                                        Text("\$200.00")
                                       ],
                                     ),
                                     Row(
                                       children: [
                                         Text("เลเวอเลจ"),
-                                        Spacer(),
-                                        Text("100")
                                       ],
                                     ),
                                     Row(
                                       children: [
                                         Text("ชื่อบัญชี"),
-                                        Spacer(),
-                                        Text("abcdefghtijkasdfasd")
                                       ],
                                     ),
                                     Row(
                                       children: [
-                                        Column(
-                                          children: [
-                                            Text("รหัสผ่านสำหรับ"),
-                                            Text("การซื้อขาย")
-                                          ],
-                                        ),
-                                        Spacer(),
-                                        Text("asdfasdfasdfasdf"),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Column(
-                                          children: [
-                                            Text("รหัสผ่านสำหรับ"),
-                                            Text("ดูเท่านั้น")
-                                          ],
-                                        ),
-                                        Spacer(),
-                                        Text("asdffasdfasdfasdf"),
+                                        Text("รหัสผ่านสำหรับดูเท่านั้น"),
                                       ],
                                     ),
                                   ],
                                 ),
-                              ),
-                            ),
-                          ],
-                        ),
+                              )),
+                          Expanded(
+                              flex: 3,
+                              child: Container(
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text("STANDARD"),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text("MT4-123456789"),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text("100"),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text("abcdefg"),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text("tyreoc465vdcpo"),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ))
+                        ],
                       ),
-                      SizedBox(
-                        height: size.height * 0.086,
-                      ),
-                      FlatButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)),
-                          color: amberC,
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: SizedBox(
-                            height: 50,
-                            width: 315,
-                            child: Center(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "ปิดหน้าต่าง",
-                                    style: TextStyle(
-                                        color: mainColor,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  Icon(
-                                    Icons.keyboard_double_arrow_right,
-                                    color: mainColor,
-                                  )
-                                ],
-                              ),
+                    ))
+              ],
+            ),
+          ),
+          Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: size.height * 0.35,
+                width: size.width,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FlatButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                        color: amberC,
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: SizedBox(
+                          height: 50,
+                          width: 315,
+                          child: Center(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "ปิดหน้าต่าง",
+                                  style: TextStyle(
+                                      color: mainColor,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                                Icon(
+                                  Icons.keyboard_double_arrow_right,
+                                  color: mainColor,
+                                )
+                              ],
                             ),
-                          )),
-                    ],
-                  ),
-                ],
+                          ),
+                        ))
+                  ],
+                ),
               ),
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }
