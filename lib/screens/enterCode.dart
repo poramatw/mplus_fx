@@ -51,7 +51,7 @@ class _EnterPinState extends State<EnterPin> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 30),
-                child: Text("ENTER YOUR CODE BELOW"),
+                child: Text("ENTER YOUR PASSCODE BELOW"),
               )
             ],
           ),
