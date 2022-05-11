@@ -453,6 +453,7 @@ class _DepositState extends State<Deposit> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Image(
+                              color: Colors.black,
                               image: AssetImage('assets/images/charity.png'),
                               height: 50,
                               width: 50,
@@ -475,7 +476,8 @@ class _DepositState extends State<Deposit> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Image(
-                            image: AssetImage('assets/images/charity_gray.png'),
+                            color: Colors.grey,
+                            image: AssetImage('assets/images/charity.png'),
                             height: 50,
                             width: 50,
                           ),
