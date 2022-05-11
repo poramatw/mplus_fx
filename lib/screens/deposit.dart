@@ -384,7 +384,7 @@ class _DepositState extends State<Deposit> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
-                            Text("Maximum Withdrawal Per time: \$100000"),
+                            Text("Maximum Withdrawal Per time: \$1500"),
                           ],
                         ),
                       ),
