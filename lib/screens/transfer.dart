@@ -13,6 +13,17 @@ class Transfer extends StatefulWidget {
 }
 
 class _TransferState extends State<Transfer> {
+  // Initial Selected Value
+  String dropdownvalue = 'Choose a Account';
+
+// List of items in our dropdown menu
+  var items = [
+    'Choose a Account',
+    'Account 1',
+    'Account 2',
+    'Account 3',
+    'Account 4',
+  ];
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
