@@ -332,6 +332,121 @@ class _TransferState extends State<Transfer> {
                 ),
               ),
               ///////////////////////////////////////////////////////////////////////////////////
+              Padding(
+                padding: const EdgeInsets.only(left: 25),
+                child: Row(
+                  children: [
+                    Text("Sender Account"),
+                  ],
+                ),
+              ),
+              DropdownButton(
+                // Initial Value
+                value: dropdownvalue,
+                dropdownColor: Color.fromARGB(255, 236, 236, 236),
+                // Down Arrow Icon
+                icon: Padding(
+                  padding: const EdgeInsets.only(left: 200),
+                  child: const Icon(Icons.keyboard_arrow_down),
+                ),
+
+                // Array list of items
+                items: items.map((String Account) {
+                  return DropdownMenuItem(
+                    value: Account,
+                    child: Text(Account),
+                  );
+                }).toList(),
+                // After selecting the desired option,it will
+                // change button value to selected value
+                onChanged: (String? newValue) {
+                  setState(() {
+                    dropdownvalue = newValue!;
+                  });
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 25),
+                child: Row(
+                  children: [
+                    Text("The remaining amount"),
+                  ],
+                ),
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Color.fromARGB(255, 236, 236, 236)),
+                width: 360,
+                height: 44,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      prefixIcon: Icon(
+                        Icons.attach_money,
+                        color: Colors.black,
+                      ),
+                      labelText: '  0'),
+                ),
+              ),
+              /////////////////////
+              Padding(
+                padding: const EdgeInsets.only(left: 25),
+                child: Row(
+                  children: [
+                    Text("Receiver Account"),
+                  ],
+                ),
+              ),
+              DropdownButton(
+                // Initial Value
+                value: dropdownvalue,
+                dropdownColor: Color.fromARGB(255, 236, 236, 236),
+                // Down Arrow Icon
+                icon: Padding(
+                  padding: const EdgeInsets.only(left: 200),
+                  child: const Icon(Icons.keyboard_arrow_down),
+                ),
+
+                // Array list of items
+                items: items.map((String Account) {
+                  return DropdownMenuItem(
+                    value: Account,
+                    child: Text(Account),
+                  );
+                }).toList(),
+                // After selecting the desired option,it will
+                // change button value to selected value
+                onChanged: (String? newValue) {
+                  setState(() {
+                    dropdownvalue = newValue!;
+                  });
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 25),
+                child: Row(
+                  children: [
+                    Text("The remaining amount"),
+                  ],
+                ),
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Color.fromARGB(255, 236, 236, 236)),
+                width: 360,
+                height: 44,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      prefixIcon: Icon(
+                        Icons.attach_money,
+                        color: Colors.black,
+                      ),
+                      labelText: '  0'),
+                ),
+              ),
             ],
           )
         ],
