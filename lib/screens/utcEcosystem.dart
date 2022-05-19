@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/widgets/viewPage.dart';
+import 'package:mplus_fx/screens/accountDetails.dart';
 
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
@@ -23,9 +23,14 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: mainColor,
-        title: Padding(
-          padding: const EdgeInsets.only(left: 60),
-          child: Text('UTC ECOSYSTEM'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 50),
+              child: Text('UTC ECOSYSTEM'),
+            ),
+          ],
         ),
       ),
       body: Column(
@@ -86,7 +91,7 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                       ),
                     ),
                     SizedBox(
-                      width: size.width * 0.065,
+                      width: 27,
                     ),
                     SizedBox(
                       height: 145,
@@ -119,11 +124,12 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 47, top: 20, right: 40),
-                  child: Row(
-                    children: [
-                      SizedBox(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 170, top: 20),
+                      child: SizedBox(
                         height: 145,
                         width: 145,
                         child: FlatButton(
@@ -131,7 +137,6 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
                           onPressed: () {},
-                          // ignore: prefer_const_literals_to_create_immutables
                           child: Column(children: [
                             Padding(
                               padding:
@@ -154,8 +159,8 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                           ]),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 )
               ],
             ),
@@ -199,7 +204,7 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                                   onPressed: (() {
                                     Navigator.push(context,
                                         MaterialPageRoute(builder: (context) {
-                                      return ViewPage();
+                                      return AccountDetails();
                                     }));
                                   }),
                                   child: Container(

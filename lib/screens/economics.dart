@@ -5,7 +5,6 @@ import 'package:mplus_fx/screens/accountDetails.dart';
 import 'package:mplus_fx/screens/calendar.dart';
 import 'package:mplus_fx/screens/markets.dart';
 import 'package:mplus_fx/screens/utcEcosystem.dart';
-import 'package:mplus_fx/widgets/viewPage.dart';
 
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
@@ -28,9 +27,15 @@ class _EconomicsState extends State<Economics> {
           appBar: AppBar(
             elevation: 0.0,
             backgroundColor: mainColor,
-            title: Padding(
-              padding: const EdgeInsets.only(left: 80),
-              child: Text('ECONOMICS'),
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // ignore: prefer_const_literals_to_create_immutables
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 50),
+                  child: Text('ECONOMICS'),
+                ),
+              ],
             ),
           ),
           body: Stack(
@@ -73,95 +78,92 @@ class _EconomicsState extends State<Economics> {
                   SizedBox(
                     height: size.height * 0.15,
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 40, top: 20, right: 40),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          height: 145,
-                          width: 145,
-                          child: FlatButton(
-                            color: boxColor,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return CalendarAPI();
-                              }));
-                            },
-                            // ignore: prefer_const_literals_to_create_immutables
-                            child: Column(children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 30, bottom: 2),
-                                child: SizedBox(
-                                    height: 64,
-                                    width: 64,
-                                    child: FittedBox(
-                                        fit: BoxFit.fill,
-                                        child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(30),
-                                            child: Image(
-                                                image: AssetImage(
-                                                    'assets/images/data-analytics.png'))))),
-                              ),
-                              Text(
-                                "CALENDAR",
-                                style: TextStyle(
-                                    color: mainColor,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600),
-                              )
-                            ]),
-                          ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 145,
+                        width: 145,
+                        child: FlatButton(
+                          color: boxColor,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)),
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return CalendarAPI();
+                            }));
+                          },
+                          // ignore: prefer_const_literals_to_create_immutables
+                          child: Column(children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 30, bottom: 2),
+                              child: SizedBox(
+                                  height: 64,
+                                  width: 64,
+                                  child: FittedBox(
+                                      fit: BoxFit.fill,
+                                      child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          child: Image(
+                                              image: AssetImage(
+                                                  'assets/images/data-analytics.png'))))),
+                            ),
+                            Text(
+                              "CALENDAR",
+                              style: TextStyle(
+                                  color: mainColor,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600),
+                            )
+                          ]),
                         ),
-                        SizedBox(
-                          width: size.width * 0.065,
+                      ),
+                      SizedBox(
+                        width: 38,
+                      ),
+                      SizedBox(
+                        height: 145,
+                        width: 145,
+                        child: FlatButton(
+                          color: boxColor,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)),
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return MarketAPI();
+                            }));
+                          },
+                          // ignore: prefer_const_literals_to_create_immutables
+                          child: Column(children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 32),
+                              child: SizedBox(
+                                  height: 64,
+                                  width: 64,
+                                  child: FittedBox(
+                                      fit: BoxFit.fill,
+                                      child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          child: Image(
+                                              image: AssetImage(
+                                                  'assets/images/markets.png'))))),
+                            ),
+                            Text(
+                              "MARKETS",
+                              style: TextStyle(
+                                  color: mainColor,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600),
+                            )
+                          ]),
                         ),
-                        SizedBox(
-                          height: 145,
-                          width: 145,
-                          child: FlatButton(
-                            color: boxColor,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return MarketAPI();
-                              }));
-                            },
-                            // ignore: prefer_const_literals_to_create_immutables
-                            child: Column(children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 32),
-                                child: SizedBox(
-                                    height: 64,
-                                    width: 64,
-                                    child: FittedBox(
-                                        fit: BoxFit.fill,
-                                        child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(30),
-                                            child: Image(
-                                                image: AssetImage(
-                                                    'assets/images/markets.png'))))),
-                              ),
-                              Text(
-                                "MARKETS",
-                                style: TextStyle(
-                                    color: mainColor,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600),
-                              )
-                            ]),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                   Expanded(
                     child: Align(
@@ -195,7 +197,7 @@ class _EconomicsState extends State<Economics> {
                                           Navigator.push(context,
                                               MaterialPageRoute(
                                                   builder: (context) {
-                                            return ViewPage();
+                                            return AccountDetails();
                                           }));
                                         }),
                                         child: Container(

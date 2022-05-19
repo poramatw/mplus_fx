@@ -129,7 +129,7 @@ class _IntroState extends State<Intro> {
                                               Navigator.push(context,
                                                   MaterialPageRoute(
                                                       builder: (context) {
-                                                return ViewPage();
+                                                return AccountDetails();
                                               }));
                                             }),
                                             child: Container(

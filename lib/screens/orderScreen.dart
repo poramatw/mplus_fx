@@ -46,7 +46,7 @@ class _OrderScState extends State<OrderSc> {
                               width: size.width,
                               child: Row(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Column(
                                     children: [

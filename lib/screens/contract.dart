@@ -42,77 +42,66 @@ class ContractUs extends StatelessWidget {
               )),
           Container(
             height: size.height * 0.35,
-            width: size.width,
+            width: 300,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 80),
-                  child: Row(
-                    children: [
-                      Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(33)),
-                          height: 55,
-                          width: 55,
-                          child: FittedBox(
-                              child: Image(
-                                  image:
-                                      AssetImage('assets/images/email.png')))),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 30),
-                        child: Text("support@mplusfx.com",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 16)),
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 80),
-                  child: Row(
-                    children: [
-                      Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(33)),
-                          height: 55,
-                          width: 55,
-                          child: FittedBox(
-                              child: Image(
-                                  image: AssetImage(
-                                      'assets/images/facebook.png')))),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 30),
-                        child: Text("Mplus Thailand",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 16)),
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 80),
-                  child: Row(
-                    children: [
-                      Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(33)),
-                          height: 55,
-                          width: 55,
-                          child: FittedBox(
-                              child: Image(
-                                  image:
-                                      AssetImage('assets/images/line.png')))),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 30),
-                        child: Text(
-                          "@mplusfx",
+                Row(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(33)),
+                        height: 55,
+                        width: 55,
+                        child: FittedBox(
+                            child: Image(
+                                image: AssetImage('assets/images/email.png')))),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30),
+                      child: Text("support@mplusfx.com",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500, fontSize: 16),
-                        ),
-                      )
-                    ],
-                  ),
+                              fontWeight: FontWeight.w500, fontSize: 16)),
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(33)),
+                        height: 55,
+                        width: 55,
+                        child: FittedBox(
+                            child: Image(
+                                image:
+                                    AssetImage('assets/images/facebook.png')))),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30),
+                      child: Text("Mplus Thailand",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 16)),
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(33)),
+                        height: 55,
+                        width: 55,
+                        child: FittedBox(
+                            child: Image(
+                                image: AssetImage('assets/images/line.png')))),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30),
+                      child: Text(
+                        "@mplusfx",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 16),
+                      ),
+                    )
+                  ],
                 ),
               ],
             ),

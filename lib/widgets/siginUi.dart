@@ -149,10 +149,10 @@ class SignInUi extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return SignUp();
-                          }));
+                          // Navigator.push(context,
+                          //     MaterialPageRoute(builder: (context) {
+                          //   return SignUp();
+                          // }));
                         },
                         child: Text("Create an account",
                             style: TextStyle(

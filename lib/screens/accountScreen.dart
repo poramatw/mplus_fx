@@ -1,6 +1,8 @@
+// ignore_for_file: deprecated_member_use, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/contract.dart';
-import 'package:mplus_fx/screens/newPin.dart';
+
 import 'package:mplus_fx/widgets/drawer.dart';
 
 import '../theme/theme.dart';
@@ -66,6 +68,7 @@ class _AccountContactState extends State<AccountContact> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Row(
+                                      // ignore: prefer_const_literals_to_create_immutables
                                       children: [
                                         Icon(Icons.account_circle,
                                             color: Colors.white),
@@ -75,6 +78,7 @@ class _AccountContactState extends State<AccountContact> {
                                       ],
                                     ),
                                     Row(
+                                      // ignore: prefer_const_literals_to_create_immutables
                                       children: [
                                         Icon(Icons.phone, color: Colors.white),
                                         Text("  เบอรโทรศัพท์",
@@ -83,6 +87,7 @@ class _AccountContactState extends State<AccountContact> {
                                       ],
                                     ),
                                     Row(
+                                      // ignore: prefer_const_literals_to_create_immutables
                                       children: [
                                         Icon(Icons.drafts, color: Colors.white),
                                         Text("  อีเมล",
@@ -91,6 +96,7 @@ class _AccountContactState extends State<AccountContact> {
                                       ],
                                     ),
                                     Row(
+                                      // ignore: prefer_const_literals_to_create_immutables
                                       children: [
                                         Icon(Icons.cake, color: Colors.white),
                                         Text("  วันเดือนปีเกิด",
@@ -99,6 +105,7 @@ class _AccountContactState extends State<AccountContact> {
                                       ],
                                     ),
                                     Row(
+                                      // ignore: prefer_const_literals_to_create_immutables
                                       children: [
                                         Icon(Icons.transgender,
                                             color: Colors.white),
@@ -108,6 +115,7 @@ class _AccountContactState extends State<AccountContact> {
                                       ],
                                     ),
                                     Row(
+                                      // ignore: prefer_const_literals_to_create_immutables
                                       children: [
                                         Icon(Icons.flag, color: Colors.white),
                                         Text("  สัญชาติ",
@@ -116,6 +124,7 @@ class _AccountContactState extends State<AccountContact> {
                                       ],
                                     ),
                                     Row(
+                                      // ignore: prefer_const_literals_to_create_immutables
                                       children: [
                                         Icon(
                                           Icons.add_location_alt,
@@ -138,6 +147,7 @@ class _AccountContactState extends State<AccountContact> {
                                         MainAxisAlignment.spaceAround,
                                     children: [
                                       Row(
+                                        // ignore: prefer_const_literals_to_create_immutables
                                         children: [
                                           Text("abcdefg hijklmnop",
                                               style: TextStyle(
@@ -145,6 +155,7 @@ class _AccountContactState extends State<AccountContact> {
                                         ],
                                       ),
                                       Row(
+                                        // ignore: prefer_const_literals_to_create_immutables
                                         children: [
                                           Text("080-0000000",
                                               style: TextStyle(
@@ -152,6 +163,7 @@ class _AccountContactState extends State<AccountContact> {
                                         ],
                                       ),
                                       Row(
+                                        // ignore: prefer_const_literals_to_create_immutables
                                         children: [
                                           Text("avasdffasdf@gmail.com",
                                               style: TextStyle(
@@ -159,6 +171,7 @@ class _AccountContactState extends State<AccountContact> {
                                         ],
                                       ),
                                       Row(
+                                        // ignore: prefer_const_literals_to_create_immutables
                                         children: [
                                           Text("30/พย/2530",
                                               style: TextStyle(
@@ -166,6 +179,7 @@ class _AccountContactState extends State<AccountContact> {
                                         ],
                                       ),
                                       Row(
+                                        // ignore: prefer_const_literals_to_create_immutables
                                         children: [
                                           Text("ชาย",
                                               style: TextStyle(
@@ -173,6 +187,7 @@ class _AccountContactState extends State<AccountContact> {
                                         ],
                                       ),
                                       Row(
+                                        // ignore: prefer_const_literals_to_create_immutables
                                         children: [
                                           Text("ไทย",
                                               style: TextStyle(
@@ -180,6 +195,7 @@ class _AccountContactState extends State<AccountContact> {
                                         ],
                                       ),
                                       Row(
+                                        // ignore: prefer_const_literals_to_create_immutables
                                         children: [
                                           Text("99/99 สุขุมวิท88 กทม.",
                                               style: TextStyle(
@@ -209,6 +225,7 @@ class _AccountContactState extends State<AccountContact> {
                                 child: Center(
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
+                                    // ignore: prefer_const_literals_to_create_immutables
                                     children: [
                                       Text(
                                         "CHANGE PIN",
@@ -226,7 +243,7 @@ class _AccountContactState extends State<AccountContact> {
                                 ),
                               )),
                           SizedBox(
-                            height: size.height * 0.03,
+                            height: size.height * 0.015,
                           ),
                           FlatButton(
                               shape: RoundedRectangleBorder(
@@ -244,6 +261,7 @@ class _AccountContactState extends State<AccountContact> {
                                 child: Center(
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
+                                    // ignore: prefer_const_literals_to_create_immutables
                                     children: [
                                       Text(
                                         "CONTACT US",

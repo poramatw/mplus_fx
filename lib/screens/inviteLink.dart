@@ -22,12 +22,17 @@ class _InviteState extends State<Invite> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: amberC,
-        title: Padding(
-          padding: const EdgeInsets.only(left: 75),
-          child: Text(
-            'ชวนเพื่อนเทรด',
-            style: TextStyle(color: mainColor),
-          ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 50),
+              child: Text(
+                'ชวนเพื่อนเทรด',
+                style: TextStyle(color: mainColor),
+              ),
+            ),
+          ],
         ),
       ),
       body: Column(

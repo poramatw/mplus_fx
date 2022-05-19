@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/main.dart';
+
 import 'package:mplus_fx/widgets/drawer.dart';
 
 import '../theme/theme.dart';

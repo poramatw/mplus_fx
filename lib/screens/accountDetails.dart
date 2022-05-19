@@ -7,9 +7,6 @@ import 'package:mplus_fx/widgets/cardViewdetails.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:mplus_fx/widgets/services.dart';
-import 'package:mplus_fx/widgets/servicesTwo.dart';
-
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
 import 'accountScreen.dart';
@@ -78,73 +75,218 @@ class _AccountDetailsState extends State<AccountDetails> {
                             color: Colors.white,
                           ),
                         ),
-                        Spacer(),
-                        Padding(
-                          padding: EdgeInsets.only(right: 30),
-                          child: SizedBox(
-                            height: 40,
-                            width: 144,
-                            child: FlatButton(
-                              color: whiteC,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30)),
-                              onPressed: () {
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) {
-                                  return OrderSc();
-                                }));
-                              },
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "TRADE",
-                                    style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
-                                        color: mainColor),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        )
                       ],
                     )),
                 Padding(
-                  padding: const EdgeInsets.only(left: 30),
-                  child: Text(
-                    "Wallet : 123456 THB",
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.white,
+                  padding: const EdgeInsets.only(left: 58, right: 82, top: 20),
+                  child: Container(
+                    width: 100,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        color: whiteC, borderRadius: BorderRadius.circular(20)),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Wallet : 123456 THB",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          color: mainColor,
+                        ),
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.052,
+                  height: size.height * 0.022,
                 ),
                 CardViewdetails(),
                 /////////////////////////////////////////////////////////////////////////////////////////////
-                Padding(
-                  padding: const EdgeInsets.only(left: 39, top: 22),
-                  child: Text(
-                    "SERVICES",
-                    style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
-                        color: Color.fromRGBO(27, 29, 111, 1)),
+                Container(
+                  height: size.height * 0.45,
+                  width: size.width,
+                  child: Column(
+                    children: [
+                      Expanded(
+                          flex: 1,
+                          child: Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  height: 48,
+                                  width: 49,
+                                  child: FittedBox(
+                                      fit: BoxFit.fill,
+                                      child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          child: Image(
+                                              color: Colors.black,
+                                              image: AssetImage(
+                                                  'assets/images/logoMplus.png')))),
+                                ),
+                                Text(
+                                  "รายละเอียดบัญชี",
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          )),
+                      Expanded(
+                          flex: 4,
+                          child: Container(
+                            child: Row(
+                              children: [
+                                Expanded(flex: 2, child: Container()),
+                                Expanded(
+                                    flex: 3,
+                                    child: Container(
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Text("ประเภทบัญชี"),
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Text("หมายเลขบัญชี"),
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Text("เลเวอเลจ"),
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Text("ชื่อบัญชี"),
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Text("รหัสผ่านสำหรับดูเท่านั้น"),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    )),
+                                Expanded(flex: 3, child: Details())
+                              ],
+                            ),
+                          ))
+                    ],
                   ),
                 ),
-                ///////////////////////////////////////////////////////////////////////////////////////////////////
-                ServiceGroup1(),
-                ServiceGroup2(),
+                TradeButt(size: size),
               ],
             ),
           ],
         ),
       ]),
       drawer: MenuDraw(),
+    );
+  }
+}
+
+class TradeButt extends StatelessWidget {
+  const TradeButt({
+    Key? key,
+    required this.size,
+  }) : super(key: key);
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: size.height * 0.08,
+      width: size.width,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)),
+              color: mainColor,
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return OrderSc();
+                }));
+              },
+              child: SizedBox(
+                height: 60,
+                width: 304,
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "TRADE",
+                        style: TextStyle(
+                            color: whiteC,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Icon(
+                        Icons.keyboard_double_arrow_right,
+                        color: whiteC,
+                      )
+                    ],
+                  ),
+                ),
+              ))
+        ],
+      ),
+    );
+  }
+}
+
+class Details extends StatelessWidget {
+  const Details({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Row(
+            children: [
+              Text("STANDARD"),
+            ],
+          ),
+          Row(
+            children: [
+              Text("MT4-123456789"),
+            ],
+          ),
+          Row(
+            children: [
+              Text("100"),
+            ],
+          ),
+          Row(
+            children: [
+              Text("abcdefg"),
+            ],
+          ),
+          Row(
+            children: [
+              Text("tyreoc465vdcpo"),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
