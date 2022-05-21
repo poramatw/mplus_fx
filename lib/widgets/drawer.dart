@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/accountDetails.dart';
+import 'package:mplus_fx/screens/calendar.dart';
 import 'package:mplus_fx/screens/economics.dart';
+import 'package:mplus_fx/screens/markets.dart';
+import 'package:mplus_fx/screens/mibSocial.dart';
 import 'package:mplus_fx/screens/orderScreen.dart';
 import 'package:mplus_fx/screens/signIn.dart';
 
@@ -117,7 +120,11 @@ class MenuDraw extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 10),
                 child: Text('MIB.SOCIAL', style: TextStyle(color: whiteC)),
               ),
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MibSocial();
+                }));
+              }),
           ListTile(
               title: Padding(
                 padding: const EdgeInsets.only(left: 10),
@@ -154,13 +161,21 @@ class MenuDraw extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 30),
                 child: Text('CALENDAR', style: TextStyle(color: whiteC)),
               ),
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return CalendarAPI();
+                }));
+              }),
           ListTile(
               title: Padding(
                 padding: const EdgeInsets.only(left: 30),
                 child: Text('MARKETS', style: TextStyle(color: whiteC)),
               ),
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MarketAPI();
+                }));
+              }),
           ListTile(
               title: Padding(
                 padding: const EdgeInsets.only(left: 10),

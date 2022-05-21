@@ -1,23 +1,23 @@
-// ignore_for_file: prefer_const_constructors, deprecated_member_use
+// ignore_for_file: deprecated_member_use, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/screens/accountDetails.dart';
-import 'package:mplus_fx/screens/calendar.dart';
-import 'package:mplus_fx/screens/markets.dart';
 import 'package:mplus_fx/screens/utcEcosystem.dart';
 
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
+import 'accountDetails.dart';
+import 'calendar.dart';
+import 'markets.dart';
 import 'mib.dart';
 
-class Economics extends StatefulWidget {
-  const Economics({Key? key}) : super(key: key);
+class MibSocial extends StatefulWidget {
+  const MibSocial({Key? key}) : super(key: key);
 
   @override
-  State<Economics> createState() => _EconomicsState();
+  State<MibSocial> createState() => _MibSocialState();
 }
 
-class _EconomicsState extends State<Economics> {
+class _MibSocialState extends State<MibSocial> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -33,7 +33,7 @@ class _EconomicsState extends State<Economics> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 50),
-                  child: Text('ECONOMICS'),
+                  child: Text('MIB.SOCIAL'),
                 ),
               ],
             ),
@@ -67,10 +67,9 @@ class _EconomicsState extends State<Economics> {
                           child: FittedBox(
                               fit: BoxFit.fill,
                               child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(30),
                                   child: Image(
                                       image: AssetImage(
-                                          'assets/images/economics.png')))),
+                                          'assets/images/mib.png')))),
                         ),
                       ),
                     ],
@@ -112,7 +111,7 @@ class _EconomicsState extends State<Economics> {
                                                   'assets/images/data-analytics.png'))))),
                             ),
                             Text(
-                              "CALENDAR",
+                              "RATING",
                               style: TextStyle(
                                   color: mainColor,
                                   fontSize: 16,
@@ -154,7 +153,7 @@ class _EconomicsState extends State<Economics> {
                                                   'assets/images/markets.png'))))),
                             ),
                             Text(
-                              "MARKETS",
+                              "COPY TRADE",
                               style: TextStyle(
                                   color: mainColor,
                                   fontSize: 16,
