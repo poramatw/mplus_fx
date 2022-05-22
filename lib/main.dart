@@ -18,6 +18,7 @@ import 'package:mplus_fx/screens/utcEcosystem.dart';
 import 'package:mplus_fx/widgets/signUpUi.dart';
 
 import 'screens/calendar.dart';
+import 'screens/coinMarketcap.dart';
 import 'screens/mib.dart';
 import 'widgets/viewPage.dart';
 //import 'package:responsive_framework/responsive_framework.dart';
@@ -32,7 +33,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SignIn(),
+      home: CoinMarketcap(),
       theme: ThemeData(fontFamily: 'Kanit'),
     );
   }
