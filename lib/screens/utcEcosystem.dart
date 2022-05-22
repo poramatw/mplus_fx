@@ -242,7 +242,8 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                               ],
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 5, right: 5),
+                              padding:
+                                  const EdgeInsets.only(left: 10, right: 10),
                               child: Column(
                                 children: [
                                   FlatButton(
@@ -253,23 +254,19 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                                       }));
                                     },
                                     child: Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      height: 34,
-                                      width: 107,
+                                      decoration: BoxDecoration(),
+                                      height: 62,
+                                      width: 62,
                                       child: FittedBox(
                                           fit: BoxFit.fill,
                                           child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
                                               child: Image(
                                                   image: AssetImage(
-                                                      'assets/images/miblogo.png')))),
+                                                      'assets/images/mib.png')))),
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 37,
+                                    height: 25,
                                   ),
                                   Text("Mib.Social",
                                       style: TextStyle(

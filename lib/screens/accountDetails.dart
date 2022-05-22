@@ -228,6 +228,7 @@ class TradeButt extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      Spacer(),
                       Text(
                         "TRADE",
                         style: TextStyle(
@@ -235,6 +236,7 @@ class TradeButt extends StatelessWidget {
                             fontSize: 16,
                             fontWeight: FontWeight.w600),
                       ),
+                      Spacer(),
                       Icon(
                         Icons.keyboard_double_arrow_right,
                         color: whiteC,
