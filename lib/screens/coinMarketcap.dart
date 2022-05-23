@@ -53,16 +53,19 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
             return Container(
               height: size.height,
               width: size.width,
-              color: amberC.withOpacity(0.2),
+              color: whiteC,
               child: Column(
                 children: [
                   Container(
                     height: size.height * 0.04,
                     width: size.width,
                     color: whiteC,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
                       children: [
+                        SizedBox(
+                          width: 10,
+                        ),
                         Row(
                           children: [
                             Text("Cryptos: "),
@@ -71,6 +74,9 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                               style: TextStyle(color: Colors.blue),
                             ),
                           ],
+                        ),
+                        SizedBox(
+                          width: 10,
                         ),
                         Row(
                           children: [
@@ -81,6 +87,9 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                           ],
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Row(
                           children: [
                             Text("Market Cap: "),
@@ -90,11 +99,62 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                           ],
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Row(
+                          children: [
+                            Text("24h Vol: "),
+                            Text(
+                              "\$0,000,000",
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Row(
+                          children: [
+                            Text("Dominance: "),
+                            Text(
+                              "BTC: ",
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                            Text(
+                              "00.0%",
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                            Text(
+                              "ETH: ",
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                            Text(
+                              "00.0%",
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Row(
+                          children: [
+                            Text("ETH Gas: "),
+                            Text(
+                              "00 Gwel",
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
                       ],
                     ),
                   ),
                   Container(
-                    color: mainColor.withOpacity(0.2),
+                    color: whiteC,
                     height: size.height * 0.1,
                     width: size.width,
                     child: Column(
@@ -129,12 +189,12 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                                 height: 25,
                                 width: 50,
                                 decoration: BoxDecoration(
-                                    color: whiteC,
+                                    color: Colors.grey,
                                     borderRadius: BorderRadius.circular(5)),
                                 child: Text(
                                   'Token',
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(color: Colors.grey),
+                                  style: TextStyle(color: whiteC),
                                 ),
                               ),
                             ),
@@ -142,12 +202,12 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                               height: 25,
                               width: 165,
                               decoration: BoxDecoration(
-                                  color: whiteC,
+                                  color: Colors.grey,
                                   borderRadius: BorderRadius.circular(5)),
                               child: Text(
                                 'On 0,000,000 watchlists',
                                 textAlign: TextAlign.center,
-                                style: TextStyle(color: Colors.grey),
+                                style: TextStyle(color: whiteC),
                               ),
                             ),
                           ],
@@ -156,7 +216,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                     ),
                   ),
                   Container(
-                    color: amberC.withOpacity(0.5),
+                    //color: amberC.withOpacity(0.5),
                     height: size.height * 0.15,
                     width: size.width,
                     child: Column(
@@ -188,7 +248,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                               height: 35,
                               width: 70,
                               decoration: BoxDecoration(
-                                  color: Colors.green,
+                                  color: Colors.greenAccent,
                                   borderRadius: BorderRadius.circular(5)),
                               child: Text(
                                 '27.4%',
@@ -238,7 +298,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                     child: Container(
                       height: size.height * 0.25,
                       width: size.width,
-                      color: mainColor.withOpacity(0.6),
+                      // color: mainColor.withOpacity(0.6),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -330,7 +390,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                   Container(
                     height: size.height * 0.1,
                     width: size.width,
-                    color: amberC,
+                    // color: amberC,
                     child: Column(
                       children: [
                         Row(
@@ -353,57 +413,194 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                   Container(
                     height: size.height * 0.08,
                     width: size.width,
-                    color: Colors.amberAccent,
-                    child: Row(
+                    // color: Colors.amberAccent,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
                       children: [
-                        Container(
-                          height: size.height * 0.05,
-                          width: size.width * 0.25,
-                          decoration: BoxDecoration(
-                              color: Colors.blueAccent,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Overview',
-                                style: TextStyle(color: whiteC, fontSize: 18),
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.25,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Overview',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.25,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Overview',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.25,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Overview',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.25,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Overview',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.25,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Overview',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.25,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Overview',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.25,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Overview',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.25,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Overview',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.25,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Overview',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
-                        Container(
-                          height: size.height * 0.05,
-                          width: size.width * 0.25,
-                          decoration: BoxDecoration(
-                              color: Colors.blueAccent,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Overview',
-                                style: TextStyle(color: whiteC, fontSize: 18),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: size.height * 0.05,
-                          width: size.width * 0.25,
-                          decoration: BoxDecoration(
-                              color: Colors.blueAccent,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Overview',
-                                style: TextStyle(color: whiteC, fontSize: 18),
-                              ),
-                            ],
-                          ),
-                        )
                       ],
                     ),
                   )
