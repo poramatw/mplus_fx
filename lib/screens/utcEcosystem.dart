@@ -74,7 +74,7 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return CoinMartCap();
+                            return CoinMarketcap();
                           }));
                         },
                         child: Column(children: [
