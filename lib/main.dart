@@ -33,7 +33,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CoinMarketcap(),
+      home: SignIn(),
       theme: ThemeData(fontFamily: 'Kanit'),
     );
   }

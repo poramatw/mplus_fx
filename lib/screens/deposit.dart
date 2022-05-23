@@ -48,9 +48,7 @@ class _DepositState extends State<Deposit> {
           Column(
             children: [
               Padding(
-
                 padding: const EdgeInsets.only(left: 10, right: 10, top: 25),
-
                 child: Container(
                   height: 70,
                   width: size.width,
@@ -60,12 +58,10 @@ class _DepositState extends State<Deposit> {
                     children: [
                       Expanded(
                           flex: 1,
-
                           child: Image(
                             image: AssetImage('assets/images/user_128px.png'),
                             height: 50,
                             width: 50,
-
                           )),
                       Expanded(
                           flex: 3,
@@ -75,7 +71,6 @@ class _DepositState extends State<Deposit> {
                                 padding: const EdgeInsets.only(top: 10),
                                 child: Row(
                                   children: [
-
                                     Text("MplusFX "),
                                     Image(
                                       image:
@@ -83,18 +78,15 @@ class _DepositState extends State<Deposit> {
                                       height: 20,
                                       width: 20,
                                     ),
-
                                   ],
                                 ),
                               ),
                               Row(
                                 children: [
-
                                   Text(
                                     "TRADER",
                                     style: TextStyle(color: Colors.grey),
                                   ),
-
                                 ],
                               )
                             ],
@@ -159,10 +151,7 @@ class _DepositState extends State<Deposit> {
                                           Container(
                                             height: 5,
                                             width: 150,
-
                                             color: Colors.green[300],
-
-
                                           ),
                                         ],
                                       ),
@@ -221,9 +210,7 @@ class _DepositState extends State<Deposit> {
                   child: Row(
                     children: [
                       Expanded(
-
                         flex: 3,
-
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -255,7 +242,6 @@ class _DepositState extends State<Deposit> {
                         ),
                       ),
                       Expanded(
-
                         flex: 1,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -284,7 +270,6 @@ class _DepositState extends State<Deposit> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text("\$ 0.00"),
-
                                 ],
                               ),
                             ),
@@ -305,9 +290,7 @@ class _DepositState extends State<Deposit> {
                   child: Row(
                     children: [
                       Expanded(
-
                         flex: 3,
-
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -331,31 +314,25 @@ class _DepositState extends State<Deposit> {
                         ),
                       ),
                       Expanded(
-
                         flex: 1,
-
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Padding(
-
                               padding: const EdgeInsets.only(right: 15),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text("\$ 10.00"),
-
                                 ],
                               ),
                             ),
                             Padding(
-
                               padding: const EdgeInsets.only(right: 15),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text("\$ 0.00"),
-
                                 ],
                               ),
                             ),
@@ -368,13 +345,11 @@ class _DepositState extends State<Deposit> {
               ),
               ///////////////////////////////////////////////////////////////////////////////////
               Padding(
-
                 padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
                 child: Container(
                   height: 75,
                   width: size.width,
                   decoration: BoxDecoration(color: amberC.withOpacity(0.4)),
-
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -382,9 +357,7 @@ class _DepositState extends State<Deposit> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
-
                             Text("Minimum Deposit Per time: \$10"),
-
                           ],
                         ),
                       ),
@@ -392,9 +365,7 @@ class _DepositState extends State<Deposit> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
-
                             Text("Maximum Deposit Per time: \$100000"),
-
                           ],
                         ),
                       ),
@@ -410,7 +381,6 @@ class _DepositState extends State<Deposit> {
                   height: 75,
                   width: size.width,
                   decoration: BoxDecoration(color: amberC.withOpacity(0.4)),
-
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -418,9 +388,7 @@ class _DepositState extends State<Deposit> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
-
                             Text("Minimum Withdrawal Per time: \$10"),
-
                           ],
                         ),
                       ),
@@ -428,16 +396,13 @@ class _DepositState extends State<Deposit> {
                         padding: const EdgeInsets.only(left: 15),
                         child: Row(
                           children: [
-
                             Text("Maximum Withdrawal Per time: \$1500"),
-
                           ],
                         ),
                       ),
                     ],
                   ),
                 ),
-
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 10, top: 10),
@@ -497,7 +462,6 @@ class _DepositState extends State<Deposit> {
                   ],
                 ),
               ),
-
             ],
           )
         ],
