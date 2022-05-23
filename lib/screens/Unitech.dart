@@ -52,9 +52,12 @@ class _CoinMarketCapState extends State<Unitech> {
                       color: Color.fromARGB(255, 20, 104, 173)),
                   child: Row(
                     children: const [
-                      Icon(
-                        Icons.attach_money_outlined,
-                        color: Colors.white,
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5, right: 5),
+                        child: Icon(
+                          Icons.monetization_on_rounded,
+                          color: Colors.white,
+                        ),
                       ),
                       Text(
                         "Secure & Safe Crypto Currency",
@@ -70,6 +73,7 @@ class _CoinMarketCapState extends State<Unitech> {
                   child: Column(
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "The",
@@ -88,6 +92,7 @@ class _CoinMarketCapState extends State<Unitech> {
                         ],
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "between",
@@ -106,6 +111,7 @@ class _CoinMarketCapState extends State<Unitech> {
                         ],
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "Crypto",
@@ -126,6 +132,7 @@ class _CoinMarketCapState extends State<Unitech> {
                   child: Column(
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "Benefit using Forex/Crypto strategies with",
@@ -137,6 +144,7 @@ class _CoinMarketCapState extends State<Unitech> {
                         ],
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "Hedging. Forex Hedging. Forex Arbitrage.",
@@ -148,6 +156,7 @@ class _CoinMarketCapState extends State<Unitech> {
                         ],
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "Correlation Trading between crypto & forex.",
@@ -165,6 +174,7 @@ class _CoinMarketCapState extends State<Unitech> {
               Padding(
                 padding: const EdgeInsets.only(left: 10, top: 10),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       height: 50,
@@ -178,9 +188,12 @@ class _CoinMarketCapState extends State<Unitech> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
-                                Icons.keyboard_double_arrow_right,
-                                color: Colors.white,
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Icon(
+                                  Icons.play_circle_outline,
+                                  color: Colors.white,
+                                ),
                               ),
                               Text(
                                 "Buy Now",
@@ -243,6 +256,19 @@ class _CoinMarketCapState extends State<Unitech> {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image(
+                      image: AssetImage('assets/images/oneutc.png'),
+                      height: 350,
+                      width: 350,
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ],
