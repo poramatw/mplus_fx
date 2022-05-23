@@ -6,7 +6,7 @@ import 'package:mplus_fx/screens/accountDetails.dart';
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
 import 'CoinMarketCap.dart';
-import 'Unitech.dart';
+import 'unitech.dart';
 import 'mib.dart';
 
 class UtcEcosystem extends StatefulWidget {
@@ -143,7 +143,12 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                           color: boxColor,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return CoinMarketcap();
+                            }));
+                          },
                           child: Column(children: [
                             Padding(
                               padding:

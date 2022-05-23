@@ -17,7 +17,6 @@ class CoinMarketcap extends StatefulWidget {
 class _CoinMarketcapState extends State<CoinMarketcap> {
   // List getCrypto = [];
 
-
   // gettCrypto() async {
   //   var url = Uri.parse(
   //       "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=60fa03ed-c415-4e7e-9271-8e6f44f9b0d7");
@@ -26,7 +25,6 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
   //     setState(() {
   //       getCrypto = jsonDecode(response.body);
   //     });
-
 
   //     return getCrypto;
   //   }
@@ -37,7 +35,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
   //   super.initState();
   //   gettCrypto();
   // }
-  bool isVisible = true;
+  bool isVisible = false;
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -50,7 +48,6 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
         ),
       ),
       body: ListView.builder(
-
           itemCount: 1,
           itemBuilder: (context, index) {
             return Container(
@@ -606,10 +603,11 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                         ),
                       ],
                     ),
-
                   )
                 ],
-              )),
+              ),
+            );
+          }),
     );
   }
 }
