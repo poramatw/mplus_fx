@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/accountDetails.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
 import 'CoinMarketCap.dart';
@@ -144,10 +146,11 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
                           onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return CoinMarketcap();
-                            }));
+                            _launchURL;
+                            // Navigator.push(context,
+                            //     MaterialPageRoute(builder: (context) {
+                            //   return CoinMarketcap();
+                            // }));
                           },
                           child: Column(children: [
                             Padding(
@@ -319,5 +322,14 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
         ],
       ),
     );
+  }
+}
+
+_launchURL() async {
+  const url = 'https://flutter.io';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
