@@ -10,6 +10,7 @@ import '../widgets/drawer.dart';
 import 'CoinMarketCap.dart';
 import 'unitech.dart';
 import 'mib.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class UtcEcosystem extends StatefulWidget {
   const UtcEcosystem({Key? key}) : super(key: key);
@@ -73,12 +74,7 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                         color: boxColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30)),
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return Unitech();
-                          }));
-                        },
+                        onPressed: _launchUrl1,
                         child: Column(children: [
                           Padding(
                             padding: const EdgeInsets.only(top: 20, bottom: 8),
@@ -109,17 +105,16 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                         color: boxColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30)),
-                        onPressed: () {},
+                        onPressed: _launchUrl2,
                         child: Column(children: [
                           Padding(
-                            padding: const EdgeInsets.only(top: 32, bottom: 15),
+                            padding: const EdgeInsets.only(top: 20, bottom: 8),
                             child: SizedBox(
-                                height: 50,
-                                width: 50,
-                                child: Icon(
-                                  Icons.travel_explore,
-                                  size: 50,
-                                )),
+                                height: 64,
+                                width: 64,
+                                child: Image(
+                                    image: AssetImage(
+                                        'assets/images/u_travel.png'))),
                           ),
                           Text(
                             "U Travel",
@@ -145,24 +140,27 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                           color: boxColor,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
-                          onPressed: () {
-                            _launchURL;
-                            // Navigator.push(context,
-                            //     MaterialPageRoute(builder: (context) {
-                            //   return CoinMarketcap();
-                            // }));
-                          },
+
+                          onPressed: _launchUrl3,
+// =======
+//                           onPressed: () {
+//                             _launchURL;
+//                             // Navigator.push(context,
+//                             //     MaterialPageRoute(builder: (context) {
+//                             //   return CoinMarketcap();
+//                             // }));
+//                           },
+// >>>>>>> main
                           child: Column(children: [
                             Padding(
                               padding:
-                                  const EdgeInsets.only(top: 32, bottom: 15),
+                                  const EdgeInsets.only(top: 20, bottom: 8),
                               child: SizedBox(
-                                  height: 50,
-                                  width: 50,
-                                  child: Icon(
-                                    Icons.circle_outlined,
-                                    size: 50,
-                                  )),
+                                  height: 64,
+                                  width: 64,
+                                  child: Image(
+                                      image: AssetImage(
+                                          'assets/images/coinmarketcap.png'))),
                             ),
                             Text(
                               "CoinMarketcap",
@@ -325,6 +323,21 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
   }
 }
 
+
+void _launchUrl1() async {
+  final Uri _url1 = Uri.parse('https://utc.money/');
+  if (!await launchUrl(_url1)) throw 'Could not launch $_url1';
+}
+
+void _launchUrl2() async {
+  final Uri _url2 = Uri.parse('https://utc-travel.com/');
+  if (!await launchUrl(_url2)) throw 'Could not launch $_url2';
+}
+
+void _launchUrl3() async {
+  final Uri _url3 = Uri.parse('https://coinmarketcap.com/currencies/unitech/');
+  if (!await launchUrl(_url3)) throw 'Could not launch $_url3';
+
 _launchURL() async {
   const url = 'https://flutter.io';
   if (await canLaunch(url)) {
@@ -332,4 +345,5 @@ _launchURL() async {
   } else {
     throw 'Could not launch $url';
   }
+
 }
