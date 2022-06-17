@@ -296,58 +296,113 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                   Visibility(
                     visible: isVisible,
                     child: Container(
-                      height: size.height * 0.25,
+                      height: size.height * 0.3,
                       width: size.width,
                       // color: mainColor.withOpacity(0.6),
-                      child: Column(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Row(
-                            children: [
-                              Text('Market Cap'),
-                              Text('\$000,000,000'),
-                              Text('0.00%'),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text('Fully Diluted Market Cap'),
-                              Text('\$000,000,000'),
-                              Text('0.00%'),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text('Volume 24h'),
-                              Text('\$000,000,000'),
-                              Text('0.00%'),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text('Volume / Marker Cap'),
-                              Text('0.00000'),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text('Ciculating Supply'),
-                              Text('00,000,000 UTC'),
-                              Text('0.00%'),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text('Max Supply'),
-                              Text('00,000,000'),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text('Total Supply'),
-                              Text('00,000,000'),
-                            ],
-                          ),
+                          Expanded(
+                              flex: 1,
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(children: [
+                                    Text('Market Cap'),
+                                  ]),
+                                  Row(
+                                    children: [
+                                      Text('Fully Diluted Market Cap'),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('Volume 24h'),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('Volume / Marker Cap'),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('Ciculating Supply'),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('Max Supply'),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('Total Supply'),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                          Expanded(
+                              flex: 1,
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text('\$000,000,000 '),
+                                      Text(
+                                        '0.00%',
+                                        style: TextStyle(color: Colors.green),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text('\$000,000,000 '),
+                                      Text('0.00%',
+                                          style:
+                                              TextStyle(color: Colors.green)),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text('\$000,000,000 '),
+                                      Text('0.00%',
+                                          style: TextStyle(color: Colors.red)),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text('0.00000'),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text('00,000,000 UTC '),
+                                      Text('0.00%'),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text('00,000,000 '),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text('00,000,000 '),
+                                    ],
+                                  ),
+                                ],
+                              )),
                         ],
                       ),
                     ),
@@ -424,7 +479,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                             Container(
                               height: size.height * 0.05,
-                              width: size.width * 0.25,
+                              width: size.width * 0.3,
                               decoration: BoxDecoration(
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(10)),
@@ -444,7 +499,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                             Container(
                               height: size.height * 0.05,
-                              width: size.width * 0.25,
+                              width: size.width * 0.3,
                               decoration: BoxDecoration(
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(10)),
@@ -452,7 +507,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Overview',
+                                    'Market',
                                     style:
                                         TextStyle(color: whiteC, fontSize: 18),
                                   ),
@@ -464,7 +519,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                             Container(
                               height: size.height * 0.05,
-                              width: size.width * 0.25,
+                              width: size.width * 0.3,
                               decoration: BoxDecoration(
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(10)),
@@ -472,7 +527,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Overview',
+                                    'Historical Data',
                                     style:
                                         TextStyle(color: whiteC, fontSize: 18),
                                   ),
@@ -484,7 +539,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                             Container(
                               height: size.height * 0.05,
-                              width: size.width * 0.25,
+                              width: size.width * 0.3,
                               decoration: BoxDecoration(
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(10)),
@@ -492,7 +547,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Overview',
+                                    'Holders',
                                     style:
                                         TextStyle(color: whiteC, fontSize: 18),
                                   ),
@@ -504,7 +559,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                             Container(
                               height: size.height * 0.05,
-                              width: size.width * 0.25,
+                              width: size.width * 0.3,
                               decoration: BoxDecoration(
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(10)),
@@ -512,7 +567,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Overview',
+                                    'Project Info',
                                     style:
                                         TextStyle(color: whiteC, fontSize: 18),
                                   ),
@@ -524,7 +579,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                             Container(
                               height: size.height * 0.05,
-                              width: size.width * 0.25,
+                              width: size.width * 0.3,
                               decoration: BoxDecoration(
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(10)),
@@ -532,7 +587,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Overview',
+                                    'Wallets',
                                     style:
                                         TextStyle(color: whiteC, fontSize: 18),
                                   ),
@@ -544,7 +599,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                             Container(
                               height: size.height * 0.05,
-                              width: size.width * 0.25,
+                              width: size.width * 0.3,
                               decoration: BoxDecoration(
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(10)),
@@ -552,7 +607,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Overview',
+                                    'News',
                                     style:
                                         TextStyle(color: whiteC, fontSize: 18),
                                   ),
@@ -564,7 +619,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                             Container(
                               height: size.height * 0.05,
-                              width: size.width * 0.25,
+                              width: size.width * 0.3,
                               decoration: BoxDecoration(
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(10)),
@@ -572,7 +627,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Overview',
+                                    'Socials',
                                     style:
                                         TextStyle(color: whiteC, fontSize: 18),
                                   ),
@@ -584,7 +639,7 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                             ),
                             Container(
                               height: size.height * 0.05,
-                              width: size.width * 0.25,
+                              width: size.width * 0.3,
                               decoration: BoxDecoration(
                                   color: Colors.blueAccent,
                                   borderRadius: BorderRadius.circular(10)),
@@ -592,12 +647,55 @@ class _CoinMarketcapState extends State<CoinMarketcap> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Overview',
+                                    'Ratings',
                                     style:
                                         TextStyle(color: whiteC, fontSize: 18),
                                   ),
                                 ],
                               ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.3,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Analysis',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.31,
+                              decoration: BoxDecoration(
+                                  color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Price Estimates',
+                                    style:
+                                        TextStyle(color: whiteC, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
                             ),
                           ],
                         ),

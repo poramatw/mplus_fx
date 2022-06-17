@@ -90,24 +90,6 @@ class MenuDraw extends StatelessWidget {
           ListTile(
               title: Padding(
                 padding: const EdgeInsets.only(left: 30),
-                child: Text('DEPOSIT', style: TextStyle(color: whiteC)),
-              ),
-              onTap: () {}),
-          ListTile(
-              title: Padding(
-                padding: const EdgeInsets.only(left: 30),
-                child: Text('WITHDRAW', style: TextStyle(color: whiteC)),
-              ),
-              onTap: () {}),
-          ListTile(
-              title: Padding(
-                padding: const EdgeInsets.only(left: 30),
-                child: Text('TRANSFER', style: TextStyle(color: whiteC)),
-              ),
-              onTap: () {}),
-          ListTile(
-              title: Padding(
-                padding: const EdgeInsets.only(left: 30),
                 child: Text('TRADE', style: TextStyle(color: whiteC)),
               ),
               onTap: () {
@@ -115,6 +97,39 @@ class MenuDraw extends StatelessWidget {
                   return OrderSc();
                 }));
               }),
+          ListTile(
+              title: Text('ECONOMICS', style: TextStyle(color: whiteC)),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Economics();
+                }));
+              }),
+          ListTile(
+              title: Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Text('CALENDAR', style: TextStyle(color: whiteC)),
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return CalendarAPI();
+                }));
+              }),
+          ListTile(
+              title: Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Text('MARKETS', style: TextStyle(color: whiteC)),
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MarketAPI();
+                }));
+              }),
+          ListTile(
+              title: Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Text('NEWS', style: TextStyle(color: whiteC)),
+              ),
+              onTap: () {}),
           ListTile(
               title: Padding(
                 padding: const EdgeInsets.only(left: 10),
@@ -149,33 +164,6 @@ class MenuDraw extends StatelessWidget {
                 child: Text('UTC MARKET', style: TextStyle(color: whiteC)),
               ),
               onTap: () {}),
-          ListTile(
-              title: Text('ECONOMICS', style: TextStyle(color: whiteC)),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Economics();
-                }));
-              }),
-          ListTile(
-              title: Padding(
-                padding: const EdgeInsets.only(left: 30),
-                child: Text('CALENDAR', style: TextStyle(color: whiteC)),
-              ),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return CalendarAPI();
-                }));
-              }),
-          ListTile(
-              title: Padding(
-                padding: const EdgeInsets.only(left: 30),
-                child: Text('MARKETS', style: TextStyle(color: whiteC)),
-              ),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return MarketAPI();
-                }));
-              }),
           ListTile(
               title: Padding(
                 padding: const EdgeInsets.only(left: 10),

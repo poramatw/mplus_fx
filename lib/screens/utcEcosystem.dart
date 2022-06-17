@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:mplus_fx/screens/accountDetails.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 import '../theme/theme.dart';
 import '../widgets/drawer.dart';
 import 'CoinMarketCap.dart';
@@ -138,7 +140,17 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
                           color: boxColor,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
+
                           onPressed: _launchUrl3,
+// =======
+//                           onPressed: () {
+//                             _launchURL;
+//                             // Navigator.push(context,
+//                             //     MaterialPageRoute(builder: (context) {
+//                             //   return CoinMarketcap();
+//                             // }));
+//                           },
+// >>>>>>> main
                           child: Column(children: [
                             Padding(
                               padding:
@@ -311,6 +323,7 @@ class _UtcEcosystemState extends State<UtcEcosystem> {
   }
 }
 
+
 void _launchUrl1() async {
   final Uri _url1 = Uri.parse('https://utc.money/');
   if (!await launchUrl(_url1)) throw 'Could not launch $_url1';
@@ -324,4 +337,13 @@ void _launchUrl2() async {
 void _launchUrl3() async {
   final Uri _url3 = Uri.parse('https://coinmarketcap.com/currencies/unitech/');
   if (!await launchUrl(_url3)) throw 'Could not launch $_url3';
+
+_launchURL() async {
+  const url = 'https://flutter.io';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+
 }

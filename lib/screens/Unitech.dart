@@ -1,8 +1,8 @@
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
-import 'package:mplus_fx/screens/accountScreen.dart';
-import '../theme/theme.dart';
+
 import '../widgets/drawer.dart';
-import 'contract.dart';
 
 class Unitech extends StatefulWidget {
   const Unitech({Key? key}) : super(key: key);
@@ -16,28 +16,23 @@ class _CoinMarketCapState extends State<Unitech> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      drawer: MenuDraw(),
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.navigate_before),
-        ),
         title: Padding(
           padding: const EdgeInsets.only(left: 100),
           child: Text("UNITECH"),
         ),
-        actions: [
-          Builder(
-            builder: (context) => IconButton(
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              icon: Icon(Icons.menu),
-            ),
-          )
-        ],
+        // actions: [
+        //   Builder(
+        //     builder: (context) => IconButton(
+        //       onPressed: () {
+        //         Scaffold.of(context).openDrawer();
+        //       },
+        //       icon: Icon(Icons.menu),
+        //     ),
+        //   )
+        // ],
       ),
       body: ListView(
         children: [
@@ -53,7 +48,7 @@ class _CoinMarketCapState extends State<Unitech> {
                   child: Row(
                     children: const [
                       Padding(
-                        padding: const EdgeInsets.only(left: 5, right: 5),
+                        padding: EdgeInsets.only(left: 5, right: 5),
                         child: Icon(
                           Icons.monetization_on_rounded,
                           color: Colors.white,
@@ -133,6 +128,7 @@ class _CoinMarketCapState extends State<Unitech> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        // ignore: prefer_const_literals_to_create_immutables
                         children: [
                           Text(
                             "Benefit using Forex/Crypto strategies with",
@@ -145,6 +141,7 @@ class _CoinMarketCapState extends State<Unitech> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        // ignore: prefer_const_literals_to_create_immutables
                         children: [
                           Text(
                             "Hedging. Forex Hedging. Forex Arbitrage.",
@@ -157,6 +154,7 @@ class _CoinMarketCapState extends State<Unitech> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        // ignore: prefer_const_literals_to_create_immutables
                         children: [
                           Text(
                             "Correlation Trading between crypto & forex.",
@@ -187,6 +185,7 @@ class _CoinMarketCapState extends State<Unitech> {
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            // ignore: prefer_const_literals_to_create_immutables
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -229,6 +228,7 @@ class _CoinMarketCapState extends State<Unitech> {
                                   ),
                                 ),
                                 Column(
+                                  // ignore: prefer_const_literals_to_create_immutables
                                   children: [
                                     Text(
                                       "23M+",
@@ -260,6 +260,7 @@ class _CoinMarketCapState extends State<Unitech> {
                 padding: const EdgeInsets.all(8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     Image(
                       image: AssetImage('assets/images/oneutc.png'),
